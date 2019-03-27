@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKU-6X-PtH">
-                                <rect key="frame" x="109" y="447" width="156" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKU-6X-PtH">
+                                <rect key="frame" x="109" y="447" width="157" height="53"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
                                 <state key="normal" title="Enter">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -28,6 +28,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.53233213569822213" green="0.94339304657994905" blue="0.97649496793746948" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="KKU-6X-PtH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4ET-76-UDm"/>
+                            <constraint firstItem="KKU-6X-PtH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="Jv6-Bj-xNv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KKU-6X-PtH" secondAttribute="bottom" constant="167" id="OA7-g5-8T3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
