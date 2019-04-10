@@ -15,6 +15,11 @@
 		1128DBE6225E69D000FC530A /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128DBDE225E69D000FC530A /* Answer+CoreDataProperties.swift */; };
 		1128DBE7225E69D000FC530A /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128DBDF225E69D000FC530A /* Record+CoreDataClass.swift */; };
 		1128DBE8225E69D000FC530A /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128DBE0225E69D000FC530A /* Record+CoreDataProperties.swift */; };
+		1128DBEC225E851500FC530A /* preloadedColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1128DBEB225E851500FC530A /* preloadedColor.plist */; };
+		1128DBEE225E853300FC530A /* preloadedAnswer.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1128DBED225E853300FC530A /* preloadedAnswer.plist */; };
+		1128DBF0225E854B00FC530A /* preloadedQuestion.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1128DBEF225E854B00FC530A /* preloadedQuestion.plist */; };
+		1128DBF2225E8BEE00FC530A /* preloadedLevels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1128DBF1225E8BEE00FC530A /* preloadedLevels.plist */; };
+		1128DBF4225E8C3C00FC530A /* preloadedCatigory.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1128DBF3225E8C3C00FC530A /* preloadedCatigory.plist */; };
 		11C8B967224C107D001EBC65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8B966224C107D001EBC65 /* AppDelegate.swift */; };
 		11C8B969224C107D001EBC65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8B968224C107D001EBC65 /* ViewController.swift */; };
 		11C8B96C224C107D001EBC65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C8B96A224C107D001EBC65 /* Main.storyboard */; };
@@ -33,6 +38,11 @@
 		1128DBDE225E69D000FC530A /* Answer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1128DBDF225E69D000FC530A /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1128DBE0225E69D000FC530A /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1128DBEB225E851500FC530A /* preloadedColor.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadedColor.plist; sourceTree = "<group>"; };
+		1128DBED225E853300FC530A /* preloadedAnswer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadedAnswer.plist; sourceTree = "<group>"; };
+		1128DBEF225E854B00FC530A /* preloadedQuestion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadedQuestion.plist; sourceTree = "<group>"; };
+		1128DBF1225E8BEE00FC530A /* preloadedLevels.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadedLevels.plist; sourceTree = "<group>"; };
+		1128DBF3225E8C3C00FC530A /* preloadedCatigory.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadedCatigory.plist; sourceTree = "<group>"; };
 		11C8B963224C107D001EBC65 /* MindBendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindBendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C8B966224C107D001EBC65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11C8B968224C107D001EBC65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +68,7 @@
 		1128DBE9225E69E700FC530A /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				11C8B96D224C107D001EBC65 /* MindBendr.xcdatamodeld */,
 				1128DBD9225E69D000FC530A /* Question+CoreDataClass.swift */,
 				1128DBDA225E69D000FC530A /* Question+CoreDataProperties.swift */,
 				1128DBDB225E69D000FC530A /* Colors+CoreDataClass.swift */,
@@ -68,6 +79,18 @@
 				1128DBE0225E69D000FC530A /* Record+CoreDataProperties.swift */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		1128DBEA225E84B400FC530A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1128DBEB225E851500FC530A /* preloadedColor.plist */,
+				1128DBED225E853300FC530A /* preloadedAnswer.plist */,
+				1128DBEF225E854B00FC530A /* preloadedQuestion.plist */,
+				1128DBF1225E8BEE00FC530A /* preloadedLevels.plist */,
+				1128DBF3225E8C3C00FC530A /* preloadedCatigory.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		11C8B95A224C107D001EBC65 = {
@@ -89,6 +112,7 @@
 		11C8B965224C107D001EBC65 /* MindBendr */ = {
 			isa = PBXGroup;
 			children = (
+				1128DBEA225E84B400FC530A /* Supporting Files */,
 				1128DBE9225E69E700FC530A /* CoreData */,
 				11C8B966224C107D001EBC65 /* AppDelegate.swift */,
 				11C8B968224C107D001EBC65 /* ViewController.swift */,
@@ -97,7 +121,6 @@
 				11C8B970224C1080001EBC65 /* Assets.xcassets */,
 				11C8B972224C1080001EBC65 /* LaunchScreen.storyboard */,
 				11C8B975224C1080001EBC65 /* Info.plist */,
-				11C8B96D224C107D001EBC65 /* MindBendr.xcdatamodeld */,
 			);
 			path = MindBendr;
 			sourceTree = "<group>";
@@ -161,8 +184,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11C8B974224C1080001EBC65 /* LaunchScreen.storyboard in Resources */,
+				1128DBEC225E851500FC530A /* preloadedColor.plist in Resources */,
 				11C8B971224C1080001EBC65 /* Assets.xcassets in Resources */,
+				1128DBF4225E8C3C00FC530A /* preloadedCatigory.plist in Resources */,
 				11C8B96C224C107D001EBC65 /* Main.storyboard in Resources */,
+				1128DBEE225E853300FC530A /* preloadedAnswer.plist in Resources */,
+				1128DBF0225E854B00FC530A /* preloadedQuestion.plist in Resources */,
+				1128DBF2225E8BEE00FC530A /* preloadedLevels.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
