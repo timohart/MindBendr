@@ -1,0 +1,105 @@
+
+Showing Recent Messages
+
+Prepare build
+note: Using new build systemnote: Planning buildnote: Using build description from memory
+
+
+Build target MindBendr of project MindBendr with configuration Debug
+
+ProcessProductPackaging "" /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/MindBendr.app-Simulated.xcent (in target: MindBendr)
+    cd /Users/tmhstudent/Documents/GitHub/MindBendr
+    
+
+Entitlements:
+
+{
+    "application-identifier" = "5B44N52BJK.edu.cvtc.Spr2019Capstone.MindBendr";
+    "keychain-access-groups" =     (
+        "5B44N52BJK.edu.cvtc.Spr2019Capstone.MindBendr"
+    );
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/MindBendr.app-Simulated.xcent
+
+ProcessProductPackaging "" /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/MindBendr.app.xcent (in target: MindBendr)
+    cd /Users/tmhstudent/Documents/GitHub/MindBendr
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/MindBendr.app.xcent
+
+CompileSwiftSources normal x86_64 com.apple.xcode.tools.swift.compiler (in target: MindBendr)
+    cd /Users/tmhstudent/Documents/GitHub/MindBendr
+    export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+    export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -incremental -module-name MindBendr -Onone -enable-batch-mode -enforce-exclusivity=checked -DDEBUG -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk -target x86_64-apple-ios12.2-simulator -g -module-cache-path /Users/tmhstudent/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Index/DataStore -swift-version 5 -I /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Products/Debug-iphonesimulator -F /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Products/Debug-iphonesimulator -c -j8 /Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Colors+CoreDataClass.swift /Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/GameViewController.swift /Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Question+CoreDataProperties.swift /Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Answer+CoreDataProperties.swift /Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Record+CoreDataProperties.swift /Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Answer+CoreDataClass.swift /Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Record+CoreDataClass.swift /Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/ViewController.swift /Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/AppDelegate.swift /Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Question+CoreDataClass.swift /Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Colors+CoreDataProperties.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Answer+CoreDataClass.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Answer+CoreDataProperties.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Catigory+CoreDataClass.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Catigory+CoreDataProperties.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Colors+CoreDataClass.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Colors+CoreDataProperties.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Level+CoreDataClass.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Level+CoreDataProperties.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Question+CoreDataClass.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Question+CoreDataProperties.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Record+CoreDataClass.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Record+CoreDataProperties.swift /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/MindBendr+CoreDataModel.swift -output-file-map /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/Objects-normal/x86_64/MindBendr-OutputFileMap.json -parseable-output -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/Objects-normal/x86_64/MindBendr.swiftmodule -Xcc -I/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/MindBendr-generated-files.hmap -Xcc -I/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/MindBendr-own-target-headers.hmap -Xcc -I/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/MindBendr-all-target-headers.hmap -Xcc -iquote -Xcc /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/MindBendr-project-headers.hmap -Xcc -I/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources-normal/x86_64 -Xcc -I/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/x86_64 -Xcc -I/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources -Xcc -DDEBUG=1 -emit-objc-header -emit-objc-header-path /Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/Objects-normal/x86_64/MindBendr-Swift.h -working-directory /Users/tmhstudent/Documents/GitHub/MindBendr
+
+<unknown>:0: error: filename "Answer+CoreDataClass.swift" used twice: '/Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Answer+CoreDataClass.swift' and '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Answer+CoreDataClass.swift'
+<unknown>:0: note: filenames are used to distinguish private declarations with the same name
+<unknown>:0: error: filename "Answer+CoreDataProperties.swift" used twice: '/Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Answer+CoreDataProperties.swift' and '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Answer+CoreDataProperties.swift'
+<unknown>:0: note: filenames are used to distinguish private declarations with the same name
+<unknown>:0: error: filename "Colors+CoreDataClass.swift" used twice: '/Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Colors+CoreDataClass.swift' and '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Colors+CoreDataClass.swift'
+<unknown>:0: note: filenames are used to distinguish private declarations with the same name
+<unknown>:0: error: filename "Colors+CoreDataProperties.swift" used twice: '/Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Colors+CoreDataProperties.swift' and '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Colors+CoreDataProperties.swift'
+<unknown>:0: note: filenames are used to distinguish private declarations with the same name
+<unknown>:0: error: filename "Question+CoreDataClass.swift" used twice: '/Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Question+CoreDataClass.swift' and '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Question+CoreDataClass.swift'
+<unknown>:0: note: filenames are used to distinguish private declarations with the same name
+<unknown>:0: error: filename "Question+CoreDataProperties.swift" used twice: '/Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Question+CoreDataProperties.swift' and '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Question+CoreDataProperties.swift'
+<unknown>:0: note: filenames are used to distinguish private declarations with the same name
+<unknown>:0: error: filename "Record+CoreDataClass.swift" used twice: '/Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Record+CoreDataClass.swift' and '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Record+CoreDataClass.swift'
+<unknown>:0: note: filenames are used to distinguish private declarations with the same name
+<unknown>:0: error: filename "Record+CoreDataProperties.swift" used twice: '/Users/tmhstudent/Documents/GitHub/MindBendr/MindBendr/Record+CoreDataProperties.swift' and '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/DerivedSources/CoreDataGenerated/MindBendr/Record+CoreDataProperties.swift'
+<unknown>:0: note: filenames are used to distinguish private declarations with the same name
+Command CompileSwiftSources failed with a nonzero exit code
+
+Build system information
+error: Multiple commands produce '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/Objects-normal/x86_64/Record+CoreDataProperties.o':
+1) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+2) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+
+Build system information
+error: Multiple commands produce '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/Objects-normal/x86_64/Record+CoreDataClass.o':
+1) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+2) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+
+Build system information
+error: Multiple commands produce '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/Objects-normal/x86_64/Question+CoreDataProperties.o':
+1) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+2) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+
+Build system information
+error: Multiple commands produce '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/Objects-normal/x86_64/Question+CoreDataClass.o':
+1) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+2) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+
+Build system information
+error: Multiple commands produce '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/Objects-normal/x86_64/Colors+CoreDataProperties.o':
+1) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+2) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+
+Build system information
+error: Multiple commands produce '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/Objects-normal/x86_64/Colors+CoreDataClass.o':
+1) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+2) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+
+Build system information
+error: Multiple commands produce '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/Objects-normal/x86_64/Answer+CoreDataProperties.o':
+1) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+2) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+
+Build system information
+error: Multiple commands produce '/Users/tmhstudent/Library/Developer/Xcode/DerivedData/MindBendr-ftfehooyqypymydfwtxxklrzmmgm/Build/Intermediates.noindex/MindBendr.build/Debug-iphonesimulator/MindBendr.build/Objects-normal/x86_64/Answer+CoreDataClass.o':
+1) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+2) Target 'MindBendr' (project 'MindBendr') has compile command for Swift source files
+
+
+
+Build failed    4/15/19, 7:42 PM    0.2 seconds

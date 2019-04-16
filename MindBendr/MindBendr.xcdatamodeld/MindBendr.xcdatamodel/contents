@@ -1,22 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Questions" representedClassName="Questions" syncable="YES" codeGenerationType="class">
-        <attribute name="correctAnswer" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="correctAnswerTextColor" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="questionID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Answer" representedClassName="Answer" syncable="YES" codeGenerationType="class">
+        <attribute name="answerText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="correctAnswer" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="aToQ" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="qToA" inverseEntity="Question" syncable="YES"/>
+        <relationship name="colorTextA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Colors" inverseName="coloringAText" inverseEntity="Colors" syncable="YES"/>
+    </entity>
+    <entity name="Catigory" representedClassName="Catigory" syncable="YES" codeGenerationType="class">
+        <attribute name="discription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="qToCatigory" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="catigoryToQ" inverseEntity="Question" syncable="YES"/>
+    </entity>
+    <entity name="Colors" representedClassName="Colors" syncable="YES" codeGenerationType="class">
+        <attribute name="blue" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="green" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="red" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="coloringAText" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Answer" inverseName="colorTextA" inverseEntity="Answer" syncable="YES"/>
+        <relationship name="coloringQText" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="coloredTextQ" inverseEntity="Question" syncable="YES"/>
+    </entity>
+    <entity name="Level" representedClassName="Level" syncable="YES" codeGenerationType="class">
+        <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="levelToQ" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="levelToQuestion" inverseEntity="Question" syncable="YES"/>
+    </entity>
+    <entity name="Question" representedClassName="Question" syncable="YES" codeGenerationType="class">
         <attribute name="questionText" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="questionTextColor" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="record" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Record" syncable="YES"/>
+        <relationship name="catigoryToQ" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Catigory" inverseName="qToCatigory" inverseEntity="Catigory" syncable="YES"/>
+        <relationship name="coloredTextQ" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Colors" inverseName="coloringQText" inverseEntity="Colors" syncable="YES"/>
+        <relationship name="levelToQuestion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Level" inverseName="levelToQ" inverseEntity="Level" syncable="YES"/>
+        <relationship name="qToA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Answer" inverseName="aToQ" inverseEntity="Answer" syncable="YES"/>
     </entity>
     <entity name="Record" representedClassName="Record" syncable="YES" codeGenerationType="class">
         <attribute name="correct" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="gameID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="incorrect" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Questions" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Questions" positionX="-4529.84375" positionY="-2979.125" width="128" height="133"/>
-        <element name="Record" positionX="-4379.64453125" positionY="-2839.6015625" width="128" height="118"/>
+        <element name="Answer" positionX="-4441.35546875" positionY="-2736.44140625" width="116.59765625" height="103"/>
+        <element name="Colors" positionX="-4630.46484375" positionY="-2907.0546875" width="128" height="118"/>
+        <element name="Question" positionX="-4787.07421875" positionY="-2739.23828125" width="128" height="118"/>
+        <element name="Record" positionX="-4426.57421875" positionY="-2903.64453125" width="128" height="105"/>
+        <element name="Level" positionX="-4608" positionY="-2763" width="128" height="75"/>
+        <element name="Catigory" positionX="-4599" positionY="-2754" width="128" height="90"/>
     </elements>
 </model>
