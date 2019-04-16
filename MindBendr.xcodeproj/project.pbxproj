@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1128DBE1225E69D000FC530A /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128DBD9225E69D000FC530A /* Question+CoreDataClass.swift */; };
-		1128DBE2225E69D000FC530A /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128DBDA225E69D000FC530A /* Question+CoreDataProperties.swift */; };
-		1128DBE3225E69D000FC530A /* Colors+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128DBDB225E69D000FC530A /* Colors+CoreDataClass.swift */; };
-		1128DBE4225E69D000FC530A /* Colors+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128DBDC225E69D000FC530A /* Colors+CoreDataProperties.swift */; };
-		1128DBE5225E69D000FC530A /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128DBDD225E69D000FC530A /* Answer+CoreDataClass.swift */; };
-		1128DBE6225E69D000FC530A /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128DBDE225E69D000FC530A /* Answer+CoreDataProperties.swift */; };
-		1128DBE7225E69D000FC530A /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128DBDF225E69D000FC530A /* Record+CoreDataClass.swift */; };
-		1128DBE8225E69D000FC530A /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1128DBE0225E69D000FC530A /* Record+CoreDataProperties.swift */; };
 		1128DBEC225E851500FC530A /* preloadedColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1128DBEB225E851500FC530A /* preloadedColor.plist */; };
 		1128DBEE225E853300FC530A /* preloadedAnswer.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1128DBED225E853300FC530A /* preloadedAnswer.plist */; };
 		1128DBF0225E854B00FC530A /* preloadedQuestion.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1128DBEF225E854B00FC530A /* preloadedQuestion.plist */; };
@@ -30,14 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1128DBD9225E69D000FC530A /* Question+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1128DBDA225E69D000FC530A /* Question+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1128DBDB225E69D000FC530A /* Colors+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1128DBDC225E69D000FC530A /* Colors+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1128DBDD225E69D000FC530A /* Answer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1128DBDE225E69D000FC530A /* Answer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1128DBDF225E69D000FC530A /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1128DBE0225E69D000FC530A /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1128DBEB225E851500FC530A /* preloadedColor.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadedColor.plist; sourceTree = "<group>"; };
 		1128DBED225E853300FC530A /* preloadedAnswer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadedAnswer.plist; sourceTree = "<group>"; };
 		1128DBEF225E854B00FC530A /* preloadedQuestion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadedQuestion.plist; sourceTree = "<group>"; };
@@ -69,14 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				11C8B96D224C107D001EBC65 /* MindBendr.xcdatamodeld */,
-				1128DBD9225E69D000FC530A /* Question+CoreDataClass.swift */,
-				1128DBDA225E69D000FC530A /* Question+CoreDataProperties.swift */,
-				1128DBDB225E69D000FC530A /* Colors+CoreDataClass.swift */,
-				1128DBDC225E69D000FC530A /* Colors+CoreDataProperties.swift */,
-				1128DBDD225E69D000FC530A /* Answer+CoreDataClass.swift */,
-				1128DBDE225E69D000FC530A /* Answer+CoreDataProperties.swift */,
-				1128DBDF225E69D000FC530A /* Record+CoreDataClass.swift */,
-				1128DBE0225E69D000FC530A /* Record+CoreDataProperties.swift */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -201,18 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1128DBE3225E69D000FC530A /* Colors+CoreDataClass.swift in Sources */,
 				888011FC2253E1B200E34E11 /* GameViewController.swift in Sources */,
-				1128DBE2225E69D000FC530A /* Question+CoreDataProperties.swift in Sources */,
-				1128DBE6225E69D000FC530A /* Answer+CoreDataProperties.swift in Sources */,
-				1128DBE8225E69D000FC530A /* Record+CoreDataProperties.swift in Sources */,
-				1128DBE5225E69D000FC530A /* Answer+CoreDataClass.swift in Sources */,
-				1128DBE7225E69D000FC530A /* Record+CoreDataClass.swift in Sources */,
 				11C8B96F224C107D001EBC65 /* MindBendr.xcdatamodeld in Sources */,
 				11C8B969224C107D001EBC65 /* ViewController.swift in Sources */,
 				11C8B967224C107D001EBC65 /* AppDelegate.swift in Sources */,
-				1128DBE1225E69D000FC530A /* Question+CoreDataClass.swift in Sources */,
-				1128DBE4225E69D000FC530A /* Colors+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

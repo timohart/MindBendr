@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    
+    preloadData()
+    
     return true
   }
 
@@ -42,6 +44,82 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     self.saveContext()
+  }
+  
+  private func preloadData() {
+    let preloadDataKey = "didPreloadedData"
+    
+    let userDefaults = UserDefaults.standard
+    
+    if userDefaults.bool(forKey:preloadDataKey) == false {
+      guard let urlPathQuestions = Bundle.main.url(forResource: "preloadedQuestion", withExtension: "plist") else {
+        return
+      }
+      
+      guard let urlPathAnswer = Bundle.main.url(forResource: "preloadedAnswer", withExtension: "plist") else {
+        return
+      }
+      
+      guard let urlPathLevels = Bundle.main.url(forResource: "preloadedLevels", withExtension: "plist") else {
+        return
+      }
+      
+      guard let urlPathCatigory = Bundle.main.url(forResource: "preloadedCatigory", withExtension: "plist") else {
+        return
+      }
+      
+      let backgroundContext = persistentContainer.newBackgroundContext()
+      
+      backgroundContext.perform {
+        do {
+          // Question
+          if let arrayContentsQuestions = NSArray(contentsOf: urlPathQuestions) as? [String] {
+            for questionInfo in arrayContentsQuestions {
+              let question = Question(context: backgroundContext)
+              question.questionText = questionInfo
+            }
+            
+            try backgroundContext.save()
+          }
+          
+          // Answer
+          if let arrayContentsAnswers = NSArray(contentsOf: urlPathAnswer) as? [String] {
+            for answerInfo in arrayContentsAnswers {
+              let answer = Answer(context: backgroundContext)
+              answer.answerText = answerInfo
+            }
+            
+            try backgroundContext.save()
+          }
+          
+          //Level
+          if let arrayContentsLevel = NSArray(contentsOf: urlPathLevels) as? [String] {
+            for levelInfo in arrayContentsLevel {
+              let level = Level(context: backgroundContext)
+              level.level = Int16(levelInfo)!
+            }
+            
+            try backgroundContext.save()
+          }
+          
+          // Catigory
+          if let arrayContentsCatigory = NSArray(contentsOf: urlPathCatigory) as? [String] {
+            for catigoryInfo in arrayContentsCatigory {
+              let catigory = Catigory(context: backgroundContext)
+              catigory.name = catigoryInfo
+              catigory.discription = catigoryInfo
+            }
+            
+            try backgroundContext.save()
+          }
+          
+          userDefaults.set(true, forKey: preloadDataKey)
+        } catch {
+          print(error.localizedDescription)
+        }
+      }
+      
+    }
   }
 
   // MARK: - Core Data stack
