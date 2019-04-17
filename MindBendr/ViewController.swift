@@ -38,21 +38,21 @@ class ViewController: UIViewController {
     
     // foreach (currentQuestion < totalQuestion) { user selects answer
     
-        // check if answer is true
+        // check if answer is true {
     
             // change answer button to green
     
             // increment userCorrect by 1
     
-        // else confirm quesiton is wrong
+        // } else confirm quesiton is wrong {
     
             // change answer button to red
     
-        // end if else
+        // } end if else
     
-        // timer count down to change question
+            // timer count down to change question
     
-        // increment currentQuestion by 1
+            // increment currentQuestion by 1
     
     // } end foreach
     
