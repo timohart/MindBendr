@@ -9,14 +9,17 @@
 import UIKit
 
 class QuizViewController: UIViewController {
+    
+    
+    @IBOutlet weak var currentQuestionCounter: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        questionLabel()
+       
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -32,16 +35,21 @@ class QuizViewController: UIViewController {
     //
     // variables
     //
-    // var currentQuestion = 0
-    // var totalQuestions = count of total questions for that quiz
-    // var userCorrect = 0
+    
+    var currentQuestion = 1
+    var totalQuestions = 10
+    var userCorrect = 0
     
     // quiz label (top of screen) is pulls text matching name of the button pressed
     
-    // increment current question viariable by 1 and
-    
     // output to currentQuestionLabel the currentQuestion of totalQuestions
+    func questionLabel () {
+        
+    currentQuestionCounter.text = "\(currentQuestion) of \(totalQuestions)"
     
+    }
+    
+
     // display first question and answer options
     
     // foreach (currentQuestion < totalQuestion) { user selects answer
