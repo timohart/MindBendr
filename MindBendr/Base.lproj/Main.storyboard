@@ -44,7 +44,6 @@
                                 </state>
                                 <connections>
                                     <action selector="NerdQuizButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUi-7Q-fGY"/>
-                                    <action selector="enterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhT-zF-jv9"/>
                                 </connections>
                             </button>
                         </subviews>
