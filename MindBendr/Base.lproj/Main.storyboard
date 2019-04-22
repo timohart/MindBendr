@@ -19,10 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKU-6X-PtH">
-                                <rect key="frame" x="109" y="435" width="157" height="65"/>
+                                <rect key="frame" x="109" y="342" width="157" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Xs0-ML-rMb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="40"/>
                                 <size key="titleShadowOffset" width="-2" height="2"/>
-                                <state key="normal" title="Enter">
+                                <state key="normal" title="Quiz 1">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -30,21 +33,31 @@
                                     <action selector="enterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fhT-zF-jv9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MindBendr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swb-m7-e9K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MindBendr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swb-m7-e9K">
                                 <rect key="frame" x="82" y="217" width="211" height="53"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="-3" height="2"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BW1-tA-VD0">
+                                <rect key="frame" x="89" y="566" width="197" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <size key="titleShadowOffset" width="-2" height="0.0"/>
+                                <state key="normal" title="Scores">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.64529776573181152" green="0.90467309951782227" blue="0.92483419179916382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KKU-6X-PtH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4ET-76-UDm"/>
-                            <constraint firstItem="KKU-6X-PtH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="Jv6-Bj-xNv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KKU-6X-PtH" secondAttribute="bottom" constant="167" id="OA7-g5-8T3"/>
-                            <constraint firstItem="swb-m7-e9K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="145" id="Ts3-MD-x1U"/>
-                            <constraint firstItem="swb-m7-e9K" firstAttribute="centerX" secondItem="KKU-6X-PtH" secondAttribute="centerX" id="jac-4a-lyy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KKU-6X-PtH" secondAttribute="bottom" constant="260" id="AYq-Lx-85y"/>
+                            <constraint firstItem="KKU-6X-PtH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="Msg-TU-ejb"/>
+                            <constraint firstItem="swb-m7-e9K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="197" id="jVx-lV-dkJ"/>
+                            <constraint firstItem="KKU-6X-PtH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oFJ-SP-pMU"/>
+                            <constraint firstItem="swb-m7-e9K" firstAttribute="centerX" secondItem="KKU-6X-PtH" secondAttribute="centerX" id="zqr-Kn-HXQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -53,20 +66,48 @@
             </objects>
             <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
-        <!--Game View Controller-->
-        <scene sceneID="ywv-DU-452">
+        <!--View Controller-->
+        <scene sceneID="9qO-G6-1SE">
             <objects>
-                <viewController id="tfO-Jh-c0x" customClass="GameViewController" customModule="MindBendr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cma-46-YoJ">
+                <viewController id="NDf-zy-umM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VuI-Mo-Enu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.64529776573181152" green="0.90467309951782227" blue="0.92483419179916382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="t4z-mK-KXF"/>
+                        <viewLayoutGuide key="safeArea" id="4pN-A2-ukl"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JIj-1y-MZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bWn-ii-HHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820" y="134"/>
+            <point key="canvasLocation" x="799" y="135"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="NWE-rL-p48">
+            <objects>
+                <tableViewController id="uIA-Nk-Zs7" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5hf-kt-k2R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Rkr-HW-JrC">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rkr-HW-JrC" id="oqh-FJ-LSG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uIA-Nk-Zs7" id="pFd-X2-l77"/>
+                            <outlet property="delegate" destination="uIA-Nk-Zs7" id="UnS-in-wPR"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ju8-WB-dFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="821"/>
         </scene>
     </scenes>
 </document>
