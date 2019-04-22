@@ -19,6 +19,7 @@
 		11C8B971224C1080001EBC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11C8B970224C1080001EBC65 /* Assets.xcassets */; };
 		11C8B974224C1080001EBC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C8B972224C1080001EBC65 /* LaunchScreen.storyboard */; };
 		888011FC2253E1B200E34E11 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888011FB2253E1B200E34E11 /* GameViewController.swift */; };
+		B4ECF187226E477400DE646B /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ECF186226E477400DE646B /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		11C8B973224C1080001EBC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11C8B975224C1080001EBC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		888011FB2253E1B200E34E11 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B4ECF186226E477400DE646B /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				11C8B970224C1080001EBC65 /* Assets.xcassets */,
 				11C8B972224C1080001EBC65 /* LaunchScreen.storyboard */,
 				11C8B975224C1080001EBC65 /* Info.plist */,
+				B4ECF186226E477400DE646B /* QuizViewController.swift */,
 			);
 			path = MindBendr;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				888011FC2253E1B200E34E11 /* GameViewController.swift in Sources */,
+				B4ECF187226E477400DE646B /* QuizViewController.swift in Sources */,
 				11C8B96F224C107D001EBC65 /* MindBendr.xcdatamodeld in Sources */,
 				11C8B969224C107D001EBC65 /* ViewController.swift in Sources */,
 				11C8B967224C107D001EBC65 /* AppDelegate.swift in Sources */,
@@ -329,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5B44N52BJK;
 				INFOPLIST_FILE = MindBendr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,6 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5B44N52BJK;
 				INFOPLIST_FILE = MindBendr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
