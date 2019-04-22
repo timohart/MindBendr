@@ -57,6 +57,10 @@ class ViewController: UIViewController {
     // } end foreach
     
     
+    // Timer Function
+        // At question 10 timer counts down to end screen
+    
+    
     
 }
 
