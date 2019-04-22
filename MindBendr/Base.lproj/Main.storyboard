@@ -130,6 +130,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKs-o1-Tfw" userLabel="timerLabel">
+                                <rect key="frame" x="31" y="54" width="76" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80936944484710693" green="0.95349770784378052" blue="0.94125187397003174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.64529776573181152" green="0.90467309951782227" blue="0.92483419179916382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -160,6 +168,7 @@
                     </view>
                     <connections>
                         <outlet property="currentQuestionCounter" destination="30y-du-9ta" id="eP2-Cs-Bzg"/>
+                        <outlet property="timerLabel" destination="qKs-o1-Tfw" id="bIL-2q-lEP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7PU-rs-hgt" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -17,6 +17,8 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
 
         questionLabel()
+        
+        setupGame()
        
     }
     
@@ -39,6 +41,19 @@ class QuizViewController: UIViewController {
     var currentQuestion = 1
     var totalQuestions = 10
     var userCorrect = 0
+    
+    // timer variables
+    @IBOutlet weak var timerLabel: UILabel!
+    var seconds = 0
+    var timer = Timer()
+    var timerText = "Time: "
+    
+    // score variables
+    var score = 0
+    var currentScore = 0
+    
+    // question variables
+    var changeQuestion = false
     
     // quiz label (top of screen) is pulls text matching name of the button pressed
     
@@ -72,9 +87,48 @@ class QuizViewController: UIViewController {
     
     // } end foreach
     
+    // Reset Timer Function
     
-    // Timer Function
-    // At question 10 timer counts down to end screen
+    // Change Question Function
+    
+    
+    func setupGame() {
+        // timer count down to change question
+        // change seconds to start at 30
+        seconds = 30
+        
+        // change timerLabel to match current time
+        timerLabel.text = "\(timerText) \(seconds)"
+        
+        // timer function to track time
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                     target: self,
+                                     selector: #selector(QuizViewController.subtractTime),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
+    
+    func runGame() {
+        
+    }
+    
+    // subtractTime func, actually subtracts time from 30 seconds to 0
+    @objc func subtractTime() {
+        // subtract 1 second every 1 second interval till 0
+        seconds -= 1 //seconds = seconds - 1
+        
+        // redisplay timer
+        timerLabel.text = "\(timerText) \(seconds)"
+        
+        
+        // if seconds hits 0, reset to 30 seconds and change question
+        if seconds == 0 {
+            // MAIN STUFF DONE IN TIME LOOP
+            changeQuestion = true
+            
+            timer.invalidate()
+        }
+    }
     
     
     
