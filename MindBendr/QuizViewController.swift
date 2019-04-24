@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+
 
 class QuizViewController: UIViewController {
     
@@ -15,7 +17,12 @@ class QuizViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // create audio player and assing to instance variable
+        if let timoBreathe = self.setUpAudioPlayerWithFile("breatheWithTimo","mp3"){
+            self.breathingWithTimo = timoBreathe
+        }
+            
         questionLabel()
         
         setupGame()
@@ -31,7 +38,10 @@ class QuizViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    // just breathe!
+    var breathingWithTimo: AVAudioPlayer?
+    
+    
     // quiz button is pressed
     
     //
@@ -130,6 +140,38 @@ class QuizViewController: UIViewController {
         }
     }
     
+    
+    
+    
+    
+    // breathing with Timo
+    func setUpAudioPlayerWithFile(_ file: String, _ type: String) -> AVAudioPlayer? {
+        // Use Bundle class to tell Xcode where in the project to look
+        // for the passed-in file. It will give us the full (absolute)
+        // pasth to file.
+        
+        let path = Bundle.main.path(forResource: file, ofType: type)
+        
+        // AVAudioPlayer needs the path in the form of a URL, so
+        // we need to conver the full path we just got in path
+        // to URL format
+        let url = URL(fileURLWithPath: path!)
+        
+        // Decalare an AVAudioPlayer variable as an optional in case
+        // there is a condition when an AVAudioPlayer object cannot
+        // be created which could be dependent on the device that
+        // is trying nnto instantiate it.
+        var audioPlayer: AVAudioPlayer?
+        
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: url)
+        } catch {
+            // can do as an alert
+            print("Player Not Available")
+        }
+        
+        return audioPlayer
+    }
     
     
 }
