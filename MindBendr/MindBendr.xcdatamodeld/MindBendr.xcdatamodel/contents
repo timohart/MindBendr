@@ -36,11 +36,11 @@
         <attribute name="incorrect" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Answer" positionX="-4441.35546875" positionY="-2736.44140625" width="116.59765625" height="103"/>
+        <element name="Answer" positionX="-4441.35546875" positionY="-2736.44140625" width="116.59765625" height="105"/>
+        <element name="Catigory" positionX="-4599" positionY="-2754" width="128" height="90"/>
         <element name="Colors" positionX="-4630.46484375" positionY="-2907.0546875" width="128" height="118"/>
+        <element name="Level" positionX="-4608" positionY="-2763" width="128" height="75"/>
         <element name="Question" positionX="-4787.07421875" positionY="-2739.23828125" width="128" height="118"/>
         <element name="Record" positionX="-4426.57421875" positionY="-2903.64453125" width="128" height="105"/>
-        <element name="Level" positionX="-4608" positionY="-2763" width="128" height="75"/>
-        <element name="Catigory" positionX="-4599" positionY="-2754" width="128" height="90"/>
     </elements>
 </model>

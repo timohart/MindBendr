@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>qText</key>
+		<string>Medically speaking, what term would be used to imply you are going to have a llama removed from your body?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>llama-ectomy</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>llama-scopy</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>llama-plasty</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>If a can of SPAM contains spiced ham, what would you expect to find in a can of SPUNKY?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>spiced capuchin</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>spiced burmese</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>spiced macaw</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>Select the color BLUE</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>BLUE</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>GREEN</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>YELLOW</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>If Steve Irwin was a pokemon trainer, what pokemon should he avoid?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>Mantine</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Gyarados</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Koffing</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>Where would you find a sella turcica?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>Your mom&apos;s face</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Your dog&apos;s tail</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Your hamster&apos;s foot</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>Pick the correct backwards spelling of a popular social media platform.</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>koobecaf</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>margratsni</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>thacpans</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>You are strapped to a spinning wheel and someone has to throw knives at you, who do you pick?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>Diego (the umbrella academy)</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>A stormtrooper</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Clumsy Smurf</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>What would you not find inside a wand from Ollivander?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>mermaid hair</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>phoenix feathers</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>dragon hearstring</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>What is your name? What is your quest?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>What is your favorite color?</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>What is your favorite weapon?</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>What is the name of your horse?</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>Hello. My name is - you killled my father. Prepare to die.</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>Inigo Montoya</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Mr. Smith</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Clint Eastwood</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>What is the answer, Deep Thought?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>42</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>What was the question?</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>pudding</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>What is the air speed velocity of an unladen swallow?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>11 meters per second</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>African or European?</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>20 miles per hour</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>Heads or Tails?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>Tails</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Vanilla</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Heads</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>blank- going to write some code together today.</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>They&apos;re</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>There</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Their</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>Click on red</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>red</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>pink</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>blue</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>You killed an oliphant and its entire crew, how many kills does it count as?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>It still only counts as 1</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Depends on the number of crew</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>At least 20</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>How many parsecs did it take the Millennium Falcon to completed the Kessel Run?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>12</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>14</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>10</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>What ailen species come from Raxacoricofallapatorius?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>The Slitheen</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Ood</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Sycorax</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>qText</key>
+		<string>&quot;I swear by my .... I will end you.&quot;</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>pretty floral bonnet</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>blood of my father</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>first born</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+</array>
+</plist>
