@@ -43,6 +43,8 @@ class QuizViewController: UIViewController {
     // button is pressed for breathing soundtrack
     //
     
+    //breathingWithTimo?.play()
+    //breathingWithTimo?.volume = 0.6
     
     
     
