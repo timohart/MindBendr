@@ -17,8 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
-    preloadData()
-    
     return true
   }
 
@@ -44,36 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     self.saveContext()
-  }
-  
-  private func preloadData() {
-    let preloadDataKey = "didPreloadedData"
-    
-    let userDefaults = UserDefaults.standard
-    
-    if userDefaults.bool(forKey:preloadDataKey) == false {
-      guard let urlPathQuestions = Bundle.main.url(forResource: "preloadedData", withExtension: "plist") else {
-        return
-      }
-      
-      let backgroundContext = persistentContainer.newBackgroundContext()
-      
-      backgroundContext.perform {
-        do {
-          if let arrayContentsQuestions = NSArray(contentsOf: urlPathQuestions) as? [AnyObject] {
-            for questionInfo in arrayContentsQuestions {
-              let question = Question(context: backgroundContext)
-              question.questionText = questionInfo
-            }
-            
-            try backgroundContext.save()
-          }
-        } catch {
-          print(error.localizedDescription)
-        }
-      }
-      
-    }
   }
 
   // MARK: - Core Data stack
