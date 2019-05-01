@@ -113,36 +113,7 @@ class QuizViewController: UIViewController {
     currentQuestionCounter.text = "\(currentQuestion) of \(totalQuestions)"
     
     }
-    
 
-    // display first question and answer options
-    
-    
-    
-    while (currentQuestion < totalQuestion) { // game is in progress, user selects answer
-    
-    if
-    // check if answer is true {
-    
-    // change answer button to green
-    
-    // increment userCorrect by 1
-    
-    // } else confirm quesiton is wrong {
-    
-    // change answer button to red
-    
-    // } end if else
-    
-    // timer count down to change question
-    
-    // increment currentQuestion by 1
-    
-    // } end foreach
-    
-    // Reset Timer Function
-    
-    // Change Question Function
     }
     
     func setupGame() {
@@ -182,9 +153,6 @@ class QuizViewController: UIViewController {
             timer.invalidate()
         }
     }
-    
-    
-    
     
     
     // breathing with Timo
