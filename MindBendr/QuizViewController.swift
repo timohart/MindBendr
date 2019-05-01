@@ -68,7 +68,7 @@ class QuizViewController: UIViewController {
     // while current question <= totalQuesions
     
     
-        // randomize the questions - this can be a function
+        // selectQuestion()
     
         // take randomized list of quizQuestions grab variable qText to display in questionLabel
     
@@ -86,7 +86,7 @@ class QuizViewController: UIViewController {
 
   
     
-    // select question function
+    // func selectQuestion(pass in quizQuestions)
         // randomlize list and create an array
         // sending to the while loop
         // delete from the array of dictionaries.
