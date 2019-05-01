@@ -20,6 +20,17 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "SegueToQuiz", sender: self)
         
     }
+    
+    
+    @IBAction func geekQuizButton(_ sender: Any) {
+        
+        performSegue(withIdentifier: "SegueToQuiz", sender: self)
+        
+    }
+    
+    
+    
+    
     ////////@IBAction func enterButton(_ sender: Any) {
         
         

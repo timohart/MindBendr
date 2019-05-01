@@ -49,17 +49,34 @@
                                     <action selector="NerdQuizButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUi-7Q-fGY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoJ-VE-fnz">
+                                <rect key="frame" x="84" y="453" width="209" height="65"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="40"/>
+                                <size key="titleShadowOffset" width="-2" height="2"/>
+                                <state key="normal" title="Geek Quiz">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="NerdQuizButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vbh-zS-BVM"/>
+                                    <action selector="geekQuizButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Klg-ax-9dA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.64529776573181152" green="0.90467309951782227" blue="0.92483419179916382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="swb-m7-e9K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="197" id="2Z0-cF-3pV"/>
+                            <constraint firstItem="KY4-Vv-U5k" firstAttribute="top" secondItem="eoJ-VE-fnz" secondAttribute="bottom" constant="55" id="AeQ-qi-QET"/>
                             <constraint firstItem="KKU-6X-PtH" firstAttribute="centerX" secondItem="KY4-Vv-U5k" secondAttribute="centerX" id="AoB-Pe-nBf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KY4-Vv-U5k" secondAttribute="bottom" constant="46" id="Ieq-i2-7Mb"/>
                             <constraint firstItem="KY4-Vv-U5k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="Nq8-Kx-fAi"/>
                             <constraint firstItem="KY4-Vv-U5k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gdc-Jp-j4c"/>
+                            <constraint firstItem="eoJ-VE-fnz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="ggV-Zc-dKk"/>
                             <constraint firstItem="KKU-6X-PtH" firstAttribute="centerX" secondItem="swb-m7-e9K" secondAttribute="centerX" id="o9F-hC-aBf"/>
                             <constraint firstItem="KKU-6X-PtH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="qTP-dH-jtn"/>
                             <constraint firstAttribute="bottom" secondItem="KKU-6X-PtH" secondAttribute="bottom" constant="228" id="roq-yq-il6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eoJ-VE-fnz" secondAttribute="trailing" constant="82" id="ukF-AB-6nd"/>
+                            <constraint firstItem="eoJ-VE-fnz" firstAttribute="top" secondItem="KKU-6X-PtH" secondAttribute="bottom" constant="14" id="wQB-gN-Ymm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

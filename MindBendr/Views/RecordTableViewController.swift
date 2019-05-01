@@ -46,7 +46,7 @@ class RecordTableViewController: UITableViewController {
         
         cell.detailTextLabel?.text = "\(date) \(correct) / \(totalQuestions)"
       default:
-        <#code#>
+      cell.textLabel?.text = "UNACCETABLE"
       }
       
         return cell
