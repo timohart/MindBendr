@@ -113,8 +113,7 @@ class QuizViewController: UIViewController {
     currentQuestionCounter.text = "\(currentQuestion) of \(totalQuestions)"
     
     }
-
-    }
+    
     
     func setupGame() {
         // timer count down to change question
