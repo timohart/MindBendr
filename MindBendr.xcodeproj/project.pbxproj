@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1118EFB52278DA5F00B4485A /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1118EFB42278DA5F00B4485A /* RecordTableViewController.swift */; };
 		1128DBEC225E851500FC530A /* preloadedColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1128DBEB225E851500FC530A /* preloadedColor.plist */; };
 		119126BB2267C61800E7704A /* preloadedData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 119126BA2267C61700E7704A /* preloadedData.plist */; };
 		11C8B967224C107D001EBC65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8B966224C107D001EBC65 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1118EFB42278DA5F00B4485A /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
 		1128DBEB225E851500FC530A /* preloadedColor.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadedColor.plist; sourceTree = "<group>"; };
 		119126BA2267C61700E7704A /* preloadedData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = preloadedData.plist; sourceTree = "<group>"; };
 		11C8B963224C107D001EBC65 /* MindBendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindBendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1118EFB32278D9C600B4485A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				11C8B968224C107D001EBC65 /* ViewController.swift */,
+				888011FB2253E1B200E34E11 /* GameViewController.swift */,
+				B4ECF186226E477400DE646B /* QuizViewController.swift */,
+				1118EFB42278DA5F00B4485A /* RecordTableViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1128DBE9225E69E700FC530A /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,14 +99,12 @@
 				B4ECF1992270B9F700DE646B /* Sounds */,
 				1128DBEA225E84B400FC530A /* Supporting Files */,
 				1128DBE9225E69E700FC530A /* CoreData */,
-				11C8B966224C107D001EBC65 /* AppDelegate.swift */,
-				11C8B968224C107D001EBC65 /* ViewController.swift */,
-				11C8B96A224C107D001EBC65 /* Main.storyboard */,
-				888011FB2253E1B200E34E11 /* GameViewController.swift */,
+				1118EFB32278D9C600B4485A /* Views */,
 				11C8B970224C1080001EBC65 /* Assets.xcassets */,
+				11C8B966224C107D001EBC65 /* AppDelegate.swift */,
+				11C8B96A224C107D001EBC65 /* Main.storyboard */,
 				11C8B972224C1080001EBC65 /* LaunchScreen.storyboard */,
 				11C8B975224C1080001EBC65 /* Info.plist */,
-				B4ECF186226E477400DE646B /* QuizViewController.swift */,
 			);
 			path = MindBendr;
 			sourceTree = "<group>";
@@ -169,9 +180,6 @@
 				1128DBEC225E851500FC530A /* preloadedColor.plist in Resources */,
 				11C8B971224C1080001EBC65 /* Assets.xcassets in Resources */,
 				11C8B96C224C107D001EBC65 /* Main.storyboard in Resources */,
-				1128DBEE225E853300FC530A /* preloadedAnswer.plist in Resources */,
-				1128DBF0225E854B00FC530A /* preloadedQuestion.plist in Resources */,
-				1128DBF2225E8BEE00FC530A /* preloadedLevels.plist in Resources */,
 				B4ECF19B2270BA1D00DE646B /* breatheWithTimo.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +195,7 @@
 				B4ECF187226E477400DE646B /* QuizViewController.swift in Sources */,
 				11C8B96F224C107D001EBC65 /* MindBendr.xcdatamodeld in Sources */,
 				11C8B969224C107D001EBC65 /* ViewController.swift in Sources */,
+				1118EFB52278DA5F00B4485A /* RecordTableViewController.swift in Sources */,
 				11C8B967224C107D001EBC65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
