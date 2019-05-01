@@ -45,15 +45,14 @@ class QuizViewController: UIViewController {
     
     //breathingWithTimo?.play()
     //breathingWithTimo?.volume = 0.6
-    
-    
-    
-    
+
     // just breathe!
     var breathingWithTimo: AVAudioPlayer?
     
-    
+    //
     // quiz button is pressed
+    //
+    
     
     //
     // variables
@@ -62,6 +61,36 @@ class QuizViewController: UIViewController {
     var currentQuestion = 1
     var totalQuestions = 10
     var userCorrect = 0
+    
+    // grab reference to plist chosen and create an array of dictionaries
+    // var quizQuestions
+    
+    // while current question <= totalQuesions
+    
+    
+        // randomize the questions - this can be a function
+    
+        // take randomized list of quizQuestions grab variable qText to display in questionLabel
+    
+        // grab the answers array associated with that question - could randomize as well
+        // display ansswerOptions on buttons for user to select from
+    
+        // if answer is true
+            // increment totalCorrect
+            // increment currentQuestion
+            // - - change button color if we have time
+        // else answer is false
+            // increment current question
+            // - - change button color if we have time
+        // end ifelse
+
+  
+    
+    // select question function
+        // randomlize list and create an array
+        // sending to the while loop
+        // delete from the array of dictionaries.
+    // end function
     
     // timer variables
     @IBOutlet weak var timerLabel: UILabel!
@@ -88,8 +117,11 @@ class QuizViewController: UIViewController {
 
     // display first question and answer options
     
-    // foreach (currentQuestion < totalQuestion) { user selects answer
     
+    
+    while (currentQuestion < totalQuestion) { // game is in progress, user selects answer
+    
+    if
     // check if answer is true {
     
     // change answer button to green
@@ -111,7 +143,7 @@ class QuizViewController: UIViewController {
     // Reset Timer Function
     
     // Change Question Function
-    
+    }
     
     func setupGame() {
         // timer count down to change question
