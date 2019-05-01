@@ -42,15 +42,28 @@ class QuizViewController: UIViewController {
     //
     // button is pressed for breathing soundtrack
     //
-    
-    //breathingWithTimo?.play()
-    //breathingWithTimo?.volume = 0.6
+
     
     
+     var breathingWithTimo: AVAudioPlayer?
     
     
-    // just breathe!
-    var breathingWithTimo: AVAudioPlayer?
+    @IBAction func breathingButton(_ sender: Any) {
+        
+        if breathingWithTimo!.isPlaying {
+            
+            breathingWithTimo?.stop()
+            
+        } else {
+            
+            breathingWithTimo?.play()
+            breathingWithTimo?.volume = 0.6
+            
+        }
+        
+        
+    }
+   
     
     
     // quiz button is pressed
