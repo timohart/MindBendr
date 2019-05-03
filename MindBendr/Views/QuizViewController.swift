@@ -11,10 +11,33 @@ import AVFoundation
 
 
 class QuizViewController: UIViewController {
-    
-    
+  
+  // MARK: - Class Vars
+    var breathingWithTimo: AVAudioPlayer?
+  
+    var currentQuestion = 1
+    var totalQuestions = 10
+    var userCorrect = 0
+  
+  // timer variables
+    var seconds = 0
+    var timer = Timer()
+    var timerText = "Time: "
+  
+  // score variables
+    var score = 0
+    var currentScore = 0
+  
+  // question variables
+    var changeQuestion = false
+  
+  // MARK: - Class Lets
+  
+  // MARK: - Outlets
     @IBOutlet weak var currentQuestionCounter: UILabel!
-
+    @IBOutlet weak var timerLabel: UILabel!
+  
+  // MARK: - At Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,28 +49,10 @@ class QuizViewController: UIViewController {
         questionLabel()
         
         setupGame()
-       
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    //
-    // button is pressed for breathing soundtrack
-    //
+  // MARK: - IBActions
 
-    
-    
-     var breathingWithTimo: AVAudioPlayer?
-    
-    
     @IBAction func breathingButton(_ sender: Any) {
         
         if breathingWithTimo!.isPlaying {
@@ -60,23 +65,11 @@ class QuizViewController: UIViewController {
             breathingWithTimo?.volume = 0.6
             
         }
-        
-        
+
     }
-   
-    
-    
-    // quiz button is pressed
-    
-    //
-    // variables
-    //
-   
-    var currentQuestion = 1
-    var totalQuestions = 10
-    var userCorrect = 0
     
     // grab reference to plist chosen and create an array of dictionaries
+  
     // var quizQuestions
     
     // while current question <= totalQuesions
@@ -104,23 +97,12 @@ class QuizViewController: UIViewController {
         // delete from the array of dictionaries.
     // end function
 
-    
-    // timer variables
-    @IBOutlet weak var timerLabel: UILabel!
-    var seconds = 0
-    var timer = Timer()
-    var timerText = "Time: "
-    
-    // score variables
-    var score = 0
-    var currentScore = 0
-    
-    // question variables
-    var changeQuestion = false
-    
     // quiz label (top of screen) is pulls text matching name of the button pressed
     
     // output to currentQuestionLabel the currentQuestion of totalQuestions
+  
+  // MARK: - Supporting Func
+  
     func questionLabel () {
         
     currentQuestionCounter.text = "\(currentQuestion) of \(totalQuestions)"
@@ -164,11 +146,7 @@ class QuizViewController: UIViewController {
             timer.invalidate()
         }
     }
-    
-    
-    
-    
-    
+
     // breathing with Timo
     func setUpAudioPlayerWithFile(_ file: String, _ type: String) -> AVAudioPlayer? {
         // Use Bundle class to tell Xcode where in the project to look
@@ -197,6 +175,18 @@ class QuizViewController: UIViewController {
         
         return audioPlayer
     }
-    
-    
+  
+  /*
+   // MARK: - Navigation
+   
+   // In a storyboard-based application, you will often want to do a little preparation before navigation
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+   // Get the new view controller using segue.destination.
+   // Pass the selected object to the new view controller.
+   }
+   */
+  
+  //
+  // button is pressed for breathing soundtrack
+  //
 }
