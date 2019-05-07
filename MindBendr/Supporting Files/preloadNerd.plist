@@ -139,24 +139,99 @@
 	</dict>
   <dict>
 		<key>qText</key>
-		<string></string>
+		<string>What is not a version of Windows?</string>
 		<key>answers</key>
 		<array>
 			<dict>
 				<key>text</key>
-				<string>365</string>
+				<string>2004</string>
 				<key>isCorrect</key>
 				<true/>
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>366</string>
+				<string>XP</string>
 				<key>isCorrect</key>
 				<false/>
 			</dict>
 			<dict>
 				<key>text</key>
-				<string>364</string>
+				<string>2000</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+  <dict>
+		<key>qText</key>
+		<string>How many minutes does it take the earth to circle the sun?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>525969.16</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>525600</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>527040</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+  <dict>
+		<key>qText</key>
+		<string>What is not a UN Member?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>Vadican City</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>The USA</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>United Kingdon</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+  <dict>
+		<key>qText</key>
+		<string>What is not a UN Member?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>Vadican City</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>The USA</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>United Kingdon</string>
 				<key>isCorrect</key>
 				<false/>
 			</dict>
