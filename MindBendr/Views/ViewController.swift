@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -14,7 +15,8 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
   }
-
+  
+  // MARK: - IBACTIONS
     @IBAction func NerdQuizButton(_ sender: Any) {
         
         performSegue(withIdentifier: "SegueToQuiz", sender: self)
@@ -27,9 +29,28 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "SegueToQuiz", sender: self)
         
     }
-    
-    
-    
+  
+    @IBAction func scoresButton(_ sender: UIButton) {
+      var records :[NSManagedObject] = []
+      
+      guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+      
+      let managedContext = appDelegate.persistentContainer.viewContext
+      
+      let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Record")
+      
+      do {
+        records = try managedContext.fetch(fetchRequest)
+      } catch {
+        fatalError("Failed to fetch records: \(error)")
+      }
+      
+      if records.count > 0 {
+        performSegue(withIdentifier: "scoreSegue", sender: self)
+      } else {
+        showAlert(title: "No Scores yet", message: "You have not completed any quizes yet. Once you have completes a quiz or more, then you can see past score and stats.")
+      }
+    }
     
     ////////@IBAction func enterButton(_ sender: Any) {
         
@@ -76,7 +97,15 @@ class ViewController: UIViewController {
     // Timer Function
         // At question 10 timer counts down to end screen
     
+  func showAlert(title: String, message: String){
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     
+    let action = UIAlertAction(title: "Okay", style: .default, handler: nil)
+    
+    alert.addAction(action)
+    
+    present(alert, animated: true, completion: nil)
+  }
     
 }
 
