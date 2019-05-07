@@ -62,7 +62,10 @@ class RecordTableViewController: UITableViewController {
           totalQuestions = totalQuestions + correct! + incorrect!
         }
         
-        cell.detailTextLabel?.text = "\(totalCorrect) / \(totalQuestions)"
+        let averageCorrect = totalCorrect / records.count
+        let averageQuestions = totalQuestions / records.count
+        
+        cell.detailTextLabel?.text = "\(averageCorrect) / \(averageQuestions)"
       case 3:
         cell.textLabel?.text = "Past Games"
       default:
