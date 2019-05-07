@@ -39,6 +39,11 @@ class QuizViewController: UIViewController {
   // MARK: - Outlets
     @IBOutlet weak var currentQuestionCounter: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
+    
+    
+    // MARK: - Arrays
+    private var questionsArray: NSArray!
+    private var answersArray: NSArray!
   
   // MARK: - At Load
     override func viewDidLoad() {
@@ -57,6 +62,20 @@ class QuizViewController: UIViewController {
 //
 //
 //        }
+        
+        let dicRoot = NSDictionary.init(contentsOfFile: Bundle.main.path(forResource: "preloadedData", ofType: "plist")!)!
+        let questionArrayFromDic: NSArray = NSArray.init(object: dicRoot.object(forKey: "qText") as Any)
+        questionsArray = questionArrayFromDic.object(at: 0) as? NSArray
+        
+        let answersArrayFromDic: NSArray = NSArray.init(object: dicRoot.object(forKey: "answers") as Any)
+        answersArray = answersArrayFromDic.object(at: 0) as? NSArray
+        
+        for count in 0..<questionsArray.count {
+            print(questionsArray[count])
+            print(answersArray[count])
+        }
+        
+        
     }
 
   // MARK: - IBActions

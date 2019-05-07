@@ -34,7 +34,8 @@
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0XF-Kg-Www" kind="show" id="80b-8E-eXS"/>
+                                    <action selector="scoresButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tiA-qo-7Hv"/>
+                                    <segue destination="0XF-Kg-Www" kind="show" identifier="scoreSegue" id="80b-8E-eXS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKU-6X-PtH">
