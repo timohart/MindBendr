@@ -31,25 +31,7 @@ class ViewController: UIViewController {
     }
   
     @IBAction func scoresButton(_ sender: UIButton) {
-      var records :[NSManagedObject] = []
-      
-      guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-      
-      let managedContext = appDelegate.persistentContainer.viewContext
-      
-      let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Record")
-      
-      do {
-        records = try managedContext.fetch(fetchRequest)
-      } catch {
-        fatalError("Failed to fetch records: \(error)")
-      }
-      
-      if records.count > 0 {
-        performSegue(withIdentifier: "scoreSegue", sender: self)
-      } else {
-        showAlert(title: "No Scores yet", message: "You have not completed any quizes yet. Once you have completes a quiz or more, then you can see past score and stats.")
-      }
+      performSegue(withIdentifier: "scoreSegue", sender: self)
     }
     
     ////////@IBAction func enterButton(_ sender: Any) {
