@@ -31,7 +31,10 @@ class QuizViewController: UIViewController {
   // question variables
     var changeQuestion = false
   
-  // MARK: - Class Lets
+    @IBOutlet weak var quizViewLabel: UILabel!
+    
+    
+    // MARK: - Class Lets
   
   // MARK: - Outlets
     @IBOutlet weak var currentQuestionCounter: UILabel!
@@ -49,6 +52,11 @@ class QuizViewController: UIViewController {
         questionLabel()
         
         setupGame()
+        
+//        if let quizOne = getPlist(withName: "preloadedData") {
+//
+//
+//        }
     }
 
   // MARK: - IBActions
@@ -69,8 +77,17 @@ class QuizViewController: UIViewController {
     }
     
     // grab reference to plist chosen and create an array of dictionaries
+    func getPlist(withName name: String) -> [String]? {
+        if  let path = Bundle.main.path(forResource: name, ofType: "plist"),
+            let xml = FileManager.default.contents(atPath: path) {
+            return (try? PropertyListSerialization.propertyList(from: xml, options: .mutableContainersAndLeaves, format: nil)) as? [String]
+        }
+        
+        return nil
+        
+    }
   
-    // var quizQuestions
+    //var quizQuestions = getPlist("preloadedData")
     
     // while current question <= totalQuesions
     
@@ -79,7 +96,7 @@ class QuizViewController: UIViewController {
         // take randomized list of quizQuestions grab variable qText to display in questionLabel
     
         // grab the answers array associated with that question - could randomize as well
-        // display ansswerOptions on buttons for user to select from
+        // display answerOptions on buttons for user to select from
     
         // if answer is true
             // increment totalCorrect
