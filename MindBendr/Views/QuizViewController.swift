@@ -33,7 +33,10 @@ class QuizViewController: UIViewController {
     var usedQuestions : [Int] = []
   
     @IBOutlet weak var quizViewLabel: UILabel!
-
+    @IBOutlet weak var answer1Btn: UIButton!
+    @IBOutlet weak var answer2Btn: UIButton!
+    @IBOutlet weak var answer3Btn: UIButton!
+  
     // MARK: - Class Lets
   
   // MARK: - Outlets
@@ -147,8 +150,38 @@ class QuizViewController: UIViewController {
     }
     
     func runGame() {
+      var questionNumber = 1
+      while questionNumber <= 10 {
+        let selectedQuestion : [String: AnyObject] = selectCurrentQuestion()
         
+        quizViewLabel.text = selectedQuestion["qText"] as? String
+        
+        if let answersArray = selectedQuestion["answers"] as? [AnyObject] as NSArray? {
+          var answersFilled = 0
+          
+          for answer in answersArray {
+            if let answerDic = answer as? [String: AnyObject] {
+              switch answersFilled {
+              case 0:
+                answer1Btn.setTitle(answerDic["text"] as? String, for: .normal)
+              case 1:
+                answer2Btn.setTitle(answerDic["text"] as? String, for: .normal)
+              case 2:
+                answer3Btn.setTitle((answerDic["text"] as! String), for: .normal)
+              default:
+                print("error in loading answers")
+              }
+            }
+            answersFilled = answersFilled + 1
+          }
+        }
+        questionNumber = questionNumber + 1
+      }
     }
+  
+  func endGame() {
+    
+  }
     
     // subtractTime func, actually subtracts time from 30 seconds to 0
     @objc func subtractTime() {
