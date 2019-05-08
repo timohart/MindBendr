@@ -64,6 +64,8 @@ class QuizViewController: UIViewController {
         if let path : String = Bundle.main.path(forResource: "preloadedData", ofType: "plist")! {
           questionsArray = NSArray(contentsOfFile: path)! as [AnyObject] as NSArray
         }
+      
+        runGame()
     }
 
   // MARK: - IBActions
