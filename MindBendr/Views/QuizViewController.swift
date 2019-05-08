@@ -30,10 +30,10 @@ class QuizViewController: UIViewController {
   
   // question variables
     var changeQuestion = false
+    var usedQuestions : [Int] = []
   
     @IBOutlet weak var quizViewLabel: UILabel!
-    
-    
+
     // MARK: - Class Lets
   
   // MARK: - Outlets
@@ -57,25 +57,10 @@ class QuizViewController: UIViewController {
         questionLabel()
         
         setupGame()
-        
-//        if let quizOne = getPlist(withName: "preloadedData") {
-//
-//
-//        }
-        
-        let dicRoot = NSDictionary.init(contentsOfFile: Bundle.main.path(forResource: "preloadedData", ofType: "plist")!)!
-        let questionArrayFromDic: NSArray = NSArray.init(object: dicRoot.object(forKey: "qText") as Any)
-        questionsArray = questionArrayFromDic.object(at: 0) as? NSArray
-        
-        let answersArrayFromDic: NSArray = NSArray.init(object: dicRoot.object(forKey: "answers") as Any)
-        answersArray = answersArrayFromDic.object(at: 0) as? NSArray
-        
-        for count in 0..<questionsArray.count {
-            print(questionsArray[count])
-            print(answersArray[count])
+      
+        if let path : String = Bundle.main.path(forResource: "preloadedData", ofType: "plist")! {
+          questionsArray = NSArray(contentsOfFile: path)! as [AnyObject] as NSArray
         }
-        
-        
     }
 
   // MARK: - IBActions
@@ -225,4 +210,20 @@ class QuizViewController: UIViewController {
   //
   // button is pressed for breathing soundtrack
   //
+  
+  func selectCurrentQuestion() -> [String: AnyObject] {
+    var selectedQuestion : [String: AnyObject]?
+    
+    while (selectedQuestion == nil) {
+      let selectedNum = Int.random(in: 0...questionsArray.count)
+      if (!usedQuestions.contains(selectedNum)) {
+        usedQuestions.append(selectedNum)
+
+        if let question = questionsArray[selectedNum] as? [String:AnyObject] {
+          selectedQuestion = question
+        }
+      } // if
+    } // While
+    return selectedQuestion!
+  } // func sCQ
 }
