@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ScoreViewController: UIViewController {
   
@@ -19,6 +20,28 @@ class ScoreViewController: UIViewController {
     super.viewDidLoad()
     
     scoreLabel.text = "\(score) / \(numberOfQuestions)"
+    
+    saveScore()
+  }
+  
+  func saveScore() {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    let context = appDelegate.persistentContainer.viewContext
+    
+    let entity = NSEntityDescription.entity(forEntityName: "Record", in: context)
+    let newScore = NSManagedObject(entity: entity!, insertInto: context)
+    
+    newScore.setValue(score, forKey: "correct")
+    newScore.setValue(numberOfQuestions - score, forKey: "incorrect")
+    newScore.setValue("nerdQuiz", forKey: "quizName")
+    newScore.setValue(Date(), forKey: "date")
+    
+    do {
+      try context.save()
+    } catch {
+      print("Failed saving")
+    }
   }
 
   /*
