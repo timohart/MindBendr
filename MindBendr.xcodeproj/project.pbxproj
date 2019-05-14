@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1118EFB52278DA5F00B4485A /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1118EFB42278DA5F00B4485A /* RecordTableViewController.swift */; };
 		1128DBEC225E851500FC530A /* preloadedColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1128DBEB225E851500FC530A /* preloadedColor.plist */; };
+		1173EB7F228B44EF000FC454 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173EB7E228B44EF000FC454 /* Question.swift */; };
+		1173EB81228B4657000FC454 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173EB80228B4657000FC454 /* Answer.swift */; };
 		119126BB2267C61800E7704A /* preloadedData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 119126BA2267C61700E7704A /* preloadedData.plist */; };
 		11C8B967224C107D001EBC65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8B966224C107D001EBC65 /* AppDelegate.swift */; };
 		11C8B969224C107D001EBC65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8B968224C107D001EBC65 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		1118EFB42278DA5F00B4485A /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
 		1128DBEB225E851500FC530A /* preloadedColor.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadedColor.plist; sourceTree = "<group>"; };
+		1173EB7E228B44EF000FC454 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1173EB80228B4657000FC454 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		119126BA2267C61700E7704A /* preloadedData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = preloadedData.plist; sourceTree = "<group>"; };
 		11C8B963224C107D001EBC65 /* MindBendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindBendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C8B966224C107D001EBC65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				11C8B96A224C107D001EBC65 /* Main.storyboard */,
 				11C8B972224C1080001EBC65 /* LaunchScreen.storyboard */,
 				11C8B975224C1080001EBC65 /* Info.plist */,
+				1173EB7E228B44EF000FC454 /* Question.swift */,
+				1173EB80228B4657000FC454 /* Answer.swift */,
 			);
 			path = MindBendr;
 			sourceTree = "<group>";
@@ -196,7 +202,9 @@
 				11C8B96F224C107D001EBC65 /* MindBendr.xcdatamodeld in Sources */,
 				11C8B969224C107D001EBC65 /* ViewController.swift in Sources */,
 				1118EFB52278DA5F00B4485A /* RecordTableViewController.swift in Sources */,
+				1173EB7F228B44EF000FC454 /* Question.swift in Sources */,
 				11C8B967224C107D001EBC65 /* AppDelegate.swift in Sources */,
+				1173EB81228B4657000FC454 /* Answer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
