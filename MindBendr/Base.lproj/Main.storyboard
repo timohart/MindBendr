@@ -204,6 +204,7 @@
                         <outlet property="currentQuestionCounter" destination="30y-du-9ta" id="eP2-Cs-Bzg"/>
                         <outlet property="quizViewLabel" destination="pGv-vK-x8t" id="oWg-2J-RG3"/>
                         <outlet property="timerLabel" destination="qKs-o1-Tfw" id="bIL-2q-lEP"/>
+                        <segue destination="Z4O-9L-Gag" kind="show" identifier="ScoreSegue" id="iVJ-h0-4aE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7PU-rs-hgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -254,10 +255,10 @@
             </objects>
             <point key="canvasLocation" x="140" y="949"/>
         </scene>
-        <!--View Controller-->
+        <!--Score View Controller-->
         <scene sceneID="87p-E1-ch4">
             <objects>
-                <viewController id="Z4O-9L-Gag" sceneMemberID="viewController">
+                <viewController id="Z4O-9L-Gag" customClass="ScoreViewController" customModule="MindBendr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f8H-Po-Zjb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,10 +279,23 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="-2" height="1"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4k-d3-EvB">
+                                <rect key="frame" x="116" y="555" width="143" height="32"/>
+                                <color key="backgroundColor" red="0.90334743920000005" green="1" blue="0.89271375870000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="17"/>
+                                <state key="normal" title="Return to Menu">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="E5q-TE-V1k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.27613633869999998" green="0.60565936570000001" blue="0.70982199909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="eyl-3T-n2n" firstAttribute="top" secondItem="y6i-IL-Wm4" secondAttribute="bottom" constant="36" id="3Un-Og-BEQ"/>
+                            <constraint firstItem="1aX-NT-dFE" firstAttribute="bottom" secondItem="m4k-d3-EvB" secondAttribute="bottom" constant="80" id="4E0-s7-hir"/>
+                            <constraint firstItem="m4k-d3-EvB" firstAttribute="centerX" secondItem="f8H-Po-Zjb" secondAttribute="centerX" id="5KZ-Kf-tOF"/>
                             <constraint firstItem="y6i-IL-Wm4" firstAttribute="leading" secondItem="1aX-NT-dFE" secondAttribute="leading" constant="87" id="694-yD-LdP"/>
                             <constraint firstItem="1aX-NT-dFE" firstAttribute="trailing" secondItem="eyl-3T-n2n" secondAttribute="trailing" constant="96" id="EMr-nO-Grr"/>
                             <constraint firstItem="1aX-NT-dFE" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y6i-IL-Wm4" secondAttribute="trailing" symbolic="YES" id="Kn1-xz-z2h"/>
@@ -290,6 +304,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1aX-NT-dFE"/>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="eyl-3T-n2n" id="jdI-GU-6SW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwz-hs-qqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

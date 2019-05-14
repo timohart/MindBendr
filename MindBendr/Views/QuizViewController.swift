@@ -16,12 +16,10 @@ class QuizViewController: UIViewController {
     var breathingWithTimo: AVAudioPlayer?
   
     var currentQuestionNumber = 1
-    var totalQuestions = 10
     var userCorrect = 0
   
-  var currentQuestion : Question?
-  
-  
+    var currentQuestion : Question?
+
   // timer variables
     var seconds = 0
     var timer = Timer()
@@ -35,17 +33,17 @@ class QuizViewController: UIViewController {
     var changeQuestion = false
     var usedQuestions : [Int] = []
   
-    @IBOutlet weak var quizViewLabel: UILabel!
-    @IBOutlet weak var answer1Btn: UIButton!
-    @IBOutlet weak var answer2Btn: UIButton!
-    @IBOutlet weak var answer3Btn: UIButton!
-  
     // MARK: - Class Lets
+    let totalQuestions = 10
   
   // MARK: - Outlets
     @IBOutlet weak var currentQuestionCounter: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
-    
+  
+    @IBOutlet weak var quizViewLabel: UILabel!
+    @IBOutlet weak var answer1Btn: UIButton!
+    @IBOutlet weak var answer2Btn: UIButton!
+    @IBOutlet weak var answer3Btn: UIButton!
     
     // MARK: - Arrays
     private var questionsArray: NSArray!
@@ -88,7 +86,7 @@ class QuizViewController: UIViewController {
   
   @IBAction func AnswerButtonClick(_ sender: Any) {
     // Check if answer is correct
-      // add to score
+      currentScore = currentScore + 1
       // other correct question stuff
     // else
       // something wrong answer
@@ -138,11 +136,13 @@ class QuizViewController: UIViewController {
   }
   
   func endGame() {
-    // set up segue
-    
-    // send score infor
-    
-    // segue
+//    viewDidAppear(true)
+    self.performSegue(withIdentifier: "ScoreSegue", sender: self)
+  }
+  
+  override func viewDidAppear(_ animated: Bool)  {
+    super.viewDidAppear(animated)
+    performSegue(withIdentifier: "ScoreSegue", sender: nil)
   }
     
     // subtractTime func, actually subtracts time from 30 seconds to 0
@@ -162,8 +162,39 @@ class QuizViewController: UIViewController {
             timer.invalidate()
         }
     }
+  
+  func selectCurrentQuestion() -> Question {
+    var selectedQuestion : Question?
+    var qText : String?
+    var answers : [Answer]?
+    
+    while (selectedQuestion == nil) {
+      let selectedNum = Int.random(in: 0...questionsArray.count)
+      if (!usedQuestions.contains(selectedNum)) {
+        usedQuestions.append(selectedNum)
+        
+        if let question = questionsArray[selectedNum] as? [String:AnyObject] {
+          qText = question["qText"] as? String
+          answers = getAnswers(aDic: question["answers"] as! [[String : AnyObject]])
+          
+          selectedQuestion = Question(text: qText!, answers: answers!)
+        }
+      } // if
+    } // While
+    return selectedQuestion!
+  } // func sCQ
+  
+  func getAnswers(aDic : [[String:AnyObject]]) -> [Answer] {
+    var answers: [Answer]!
+    
+    for answer in aDic {
+      answers.append(Answer(text: (answer["text"] as? String)!, isCorrect: (answer["isCorrect"] as? Bool)!))
+    }
+    
+    return answers
+  }
 
-    // breathing with Timo
+  // MARK: - breathing with Timo
     func setUpAudioPlayerWithFile(_ file: String, _ type: String) -> AVAudioPlayer? {
         // Use Bundle class to tell Xcode where in the project to look
         // for the passed-in file. It will give us the full (absolute)
@@ -192,48 +223,18 @@ class QuizViewController: UIViewController {
         return audioPlayer
     }
   
-  /*
    // MARK: - Navigation
    
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
+// In a storyboard-based application, you will often want to do a little preparation before navigation
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destination.
-   // Pass the selected object to the new view controller.
-   }
-   */
-  
-  //
-  // button is pressed for breathing soundtrack
-  //
-  
-  func selectCurrentQuestion() -> Question {
-    var selectedQuestion : Question?
-    var qText : String?
-    var answers : [Answer]?
-    
-    while (selectedQuestion == nil) {
-      let selectedNum = Int.random(in: 0...questionsArray.count)
-      if (!usedQuestions.contains(selectedNum)) {
-        usedQuestions.append(selectedNum)
+    if segue.identifier == "ScoreViewController" {
+        // Get a reference to the destination view controller for this segue and set its author property to the currently selected author in the table view that was obtained in the nested if portion of the optional binding chain above...
+        let destinationViewController = segue.destination as! ScoreViewController
 
-        if let question = questionsArray[selectedNum] as? [String:AnyObject] {
-          qText = question["qText"] as! String
-          answers = getAnswers(aDic: question["answers"] as! [[String : AnyObject]])
-          
-          selectedQuestion = Question(text: qText!, answers: answers!)
-        }
-      } // if
-    } // While
-    return selectedQuestion!
-  } // func sCQ
-  
-  func getAnswers(aDic : [[String:AnyObject]]) -> [Answer] {
-    var answers: [Answer]!
-    
-    for answer in aDic {
-      answers.append(Answer(text: (answer["text"] as? String)!, isCorrect: (answer["isCorrect"] as? Bool)!))
+        // set booksTableViewController's author property
+        destinationViewController.score = currentScore
+        destinationViewController.numberOfQuestions = totalQuestions
     }
-    
-    return answers
-  }
+   }
+  
 }
