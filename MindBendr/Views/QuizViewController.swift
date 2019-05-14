@@ -96,7 +96,7 @@ class QuizViewController: UIViewController {
         
     }
   
-    //var quizQuestions = getPlist("preloadedData")
+    // var quizQuestions = getPlist("preloadedData")
     
     // while current question <= totalQuesions
     
