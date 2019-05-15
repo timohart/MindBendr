@@ -45,8 +45,39 @@ class RecordTableViewController: UITableViewController {
         let totalQuestions : Int = correct! + incorrect!
         
         cell.detailTextLabel?.text = "\(date) \(correct) / \(totalQuestions)"
+      case 1:
+        cell.textLabel?.text = "Number of Games"
+        cell.detailTextLabel?.text = "\(records.count)"
+      case 2:
+        cell.textLabel?.text = "Average Score"
+        
+        var totalCorrect : Int = 0
+        var totalQuestions : Int = 0
+        
+        for record in records {
+          let correct = record.value(forKey: "correct") as? Int
+          let incorrect = record.value(forKey: "incorrect") as? Int
+          
+          totalCorrect = totalCorrect + correct!
+          totalQuestions = totalQuestions + correct! + incorrect!
+        }
+        
+        let averageCorrect = totalCorrect / records.count
+        let averageQuestions = totalQuestions / records.count
+        
+        cell.detailTextLabel?.text = "\(averageCorrect) / \(averageQuestions)"
+      case 3:
+        cell.textLabel?.text = "Past Games"
       default:
-      cell.textLabel?.text = "UNACCETABLE"
+        let record = records[indexPath.row - 4]
+        
+        let correct = record.value(forKey: "correct") as? Int
+        let incorrect = record.value(forKey: "incorrect") as? Int
+        let date = record.value(forKey: "date") as? String
+        let totalQuestions : Int = correct! + incorrect!
+        
+        cell.textLabel?.text = "\(date)"
+        cell.detailTextLabel?.text = "\(correct) / \(totalQuestions)"
       }
       
         return cell
