@@ -18,21 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KY4-Vv-U5k">
-                                <rect key="frame" x="99" y="568" width="177" height="53"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="36"/>
-                                <size key="titleShadowOffset" width="-2" height="0.0"/>
-                                <state key="normal" title="Scores">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="scoresButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tiA-qo-7Hv"/>
-                                    <segue destination="0XF-Kg-Www" kind="show" identifier="scoreSegue" id="80b-8E-eXS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKU-6X-PtH">
-                                <rect key="frame" x="71" y="381" width="233" height="58"/>
+                                <rect key="frame" x="71" y="381" width="217" height="58"/>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="40"/>
                                 <size key="titleShadowOffset" width="-2" height="2"/>
                                 <state key="normal" title="Nerd Quiz">
@@ -47,7 +34,7 @@
                                 <rect key="frame" x="8" y="9" width="359" height="364"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoJ-VE-fnz">
-                                <rect key="frame" x="63" y="447" width="249" height="65"/>
+                                <rect key="frame" x="63" y="447" width="249" height="58"/>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="40"/>
                                 <size key="titleShadowOffset" width="-2" height="2"/>
                                 <state key="normal" title="Geek Quiz">
@@ -63,12 +50,7 @@
                         <color key="backgroundColor" red="0.27613633871078491" green="0.6056593656539917" blue="0.70982199907302856" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="axR-fX-vNY" secondAttribute="trailing" constant="8" id="4vR-Hl-azG"/>
-                            <constraint firstItem="KY4-Vv-U5k" firstAttribute="top" secondItem="eoJ-VE-fnz" secondAttribute="bottom" constant="56" id="AeQ-qi-QET"/>
-                            <constraint firstItem="KKU-6X-PtH" firstAttribute="centerX" secondItem="KY4-Vv-U5k" secondAttribute="centerX" id="AoB-Pe-nBf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KY4-Vv-U5k" secondAttribute="bottom" constant="46" id="Ieq-i2-7Mb"/>
-                            <constraint firstItem="KY4-Vv-U5k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="Nq8-Kx-fAi"/>
                             <constraint firstItem="KKU-6X-PtH" firstAttribute="top" secondItem="axR-fX-vNY" secondAttribute="bottom" constant="8" id="buj-Ie-sDl"/>
-                            <constraint firstItem="KY4-Vv-U5k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gdc-Jp-j4c"/>
                             <constraint firstItem="eoJ-VE-fnz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="ggV-Zc-dKk"/>
                             <constraint firstItem="axR-fX-vNY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="mh0-ra-0MQ"/>
                             <constraint firstItem="axR-fX-vNY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="9" id="nng-ec-XO7"/>
@@ -219,50 +201,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7PU-rs-hgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="974" y="134"/>
-        </scene>
-        <!--Record Table View Controller-->
-        <scene sceneID="oSI-Z5-orb">
-            <objects>
-                <tableViewController id="0XF-Kg-Www" customClass="RecordTableViewController" customModule="MindBendr" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vdx-ke-KuG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="MhJ-gW-Q1E" detailTextLabel="bWm-Ie-XCV" style="IBUITableViewCellStyleValue1" id="yGo-fA-7cc">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yGo-fA-7cc" id="Ru9-dm-CW0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MhJ-gW-Q1E">
-                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bWm-Ie-XCV">
-                                            <rect key="frame" x="315" y="12" width="44" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="0XF-Kg-Www" id="jeC-FL-n6Y"/>
-                            <outlet property="delegate" destination="0XF-Kg-Www" id="kKP-6E-Ibk"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mHd-78-Gss" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="140" y="949"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="87p-E1-ch4">
