@@ -108,8 +108,7 @@ class QuizViewController: UIViewController {
     }
   
   @IBAction func AnswerButtonClick(_ sender: UIButton) {
-    answerQuestion()
-   /* var isCorrect : Bool = false
+   var isCorrect : Bool = false
     
     for answer in currentQuestion!.answers {
       if answer.text == sender.titleLabel?.text {
@@ -128,7 +127,7 @@ class QuizViewController: UIViewController {
       currentScore = currentScore + 1
     }
 
-    loadQuestion() */
+    loadQuestion()
   }
   
   // MARK: - Supporting Func
@@ -175,17 +174,17 @@ class QuizViewController: UIViewController {
     var usedAnswers = [Int]()
     
     while (usedAnswers.count < (currentQuestion?.answers.count)!) {
-      let selectedNum = Int.random(in: 0...(currentQuestion?.answers.count)!)
+      let selectedNum = Int.random(in: 1...(currentQuestion?.answers.count)!)
       if (!usedAnswers.contains(selectedNum)) {
         usedAnswers.append(selectedNum)
-        
+        print("num: \(selectedNum)")
         switch selectedNum {
-        case 0:
-          answer1Btn.setTitle(currentQuestion?.answers[selectedNum].text, for: .normal)
         case 1:
-          answer2Btn.setTitle(currentQuestion?.answers[selectedNum].text, for: .normal)
+          answer1Btn.setTitle(currentQuestion?.answers[selectedNum-1].text, for: .normal)
         case 2:
-          answer3Btn.setTitle(currentQuestion?.answers[selectedNum].text, for: .normal)
+          answer2Btn.setTitle(currentQuestion?.answers[selectedNum-1].text, for: .normal)
+        case 3:
+          answer3Btn.setTitle(currentQuestion?.answers[selectedNum-1].text, for: .normal)
         default:
           print("Error!!")
         }
