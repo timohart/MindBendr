@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1118EFB52278DA5F00B4485A /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1118EFB42278DA5F00B4485A /* RecordTableViewController.swift */; };
 		1128DBEC225E851500FC530A /* preloadedColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1128DBEB225E851500FC530A /* preloadedColor.plist */; };
+		1173EB7F228B44EF000FC454 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173EB7E228B44EF000FC454 /* Question.swift */; };
+		1173EB81228B4657000FC454 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173EB80228B4657000FC454 /* Answer.swift */; };
+		1173EB83228B7D46000FC454 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173EB82228B7D46000FC454 /* ScoreViewController.swift */; };
 		119126BB2267C61800E7704A /* preloadedData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 119126BA2267C61700E7704A /* preloadedData.plist */; };
 		11C8B967224C107D001EBC65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8B966224C107D001EBC65 /* AppDelegate.swift */; };
 		11C8B969224C107D001EBC65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C8B968224C107D001EBC65 /* ViewController.swift */; };
@@ -16,7 +19,6 @@
 		11C8B96F224C107D001EBC65 /* MindBendr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11C8B96D224C107D001EBC65 /* MindBendr.xcdatamodeld */; };
 		11C8B971224C1080001EBC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11C8B970224C1080001EBC65 /* Assets.xcassets */; };
 		11C8B974224C1080001EBC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C8B972224C1080001EBC65 /* LaunchScreen.storyboard */; };
-		888011FC2253E1B200E34E11 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888011FB2253E1B200E34E11 /* GameViewController.swift */; };
 		B4ECF187226E477400DE646B /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ECF186226E477400DE646B /* QuizViewController.swift */; };
 		B4ECF19B2270BA1D00DE646B /* breatheWithTimo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4ECF19A2270BA1D00DE646B /* breatheWithTimo.mp3 */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,9 @@
 /* Begin PBXFileReference section */
 		1118EFB42278DA5F00B4485A /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
 		1128DBEB225E851500FC530A /* preloadedColor.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadedColor.plist; sourceTree = "<group>"; };
+		1173EB7E228B44EF000FC454 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1173EB80228B4657000FC454 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		1173EB82228B7D46000FC454 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		119126BA2267C61700E7704A /* preloadedData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = preloadedData.plist; sourceTree = "<group>"; };
 		11C8B963224C107D001EBC65 /* MindBendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindBendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C8B966224C107D001EBC65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +38,6 @@
 		11C8B970224C1080001EBC65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11C8B973224C1080001EBC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11C8B975224C1080001EBC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		888011FB2253E1B200E34E11 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B4ECF186226E477400DE646B /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		B4ECF19A2270BA1D00DE646B /* breatheWithTimo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = breatheWithTimo.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,9 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				11C8B968224C107D001EBC65 /* ViewController.swift */,
-				888011FB2253E1B200E34E11 /* GameViewController.swift */,
 				B4ECF186226E477400DE646B /* QuizViewController.swift */,
 				1118EFB42278DA5F00B4485A /* RecordTableViewController.swift */,
+				1173EB82228B7D46000FC454 /* ScoreViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -77,6 +81,15 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1173EB84228B881E000FC454 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				1173EB7E228B44EF000FC454 /* Question.swift */,
+				1173EB80228B4657000FC454 /* Answer.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		11C8B95A224C107D001EBC65 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +109,7 @@
 		11C8B965224C107D001EBC65 /* MindBendr */ = {
 			isa = PBXGroup;
 			children = (
+				1173EB84228B881E000FC454 /* Objects */,
 				B4ECF1992270B9F700DE646B /* Sounds */,
 				1128DBEA225E84B400FC530A /* Supporting Files */,
 				1128DBE9225E69E700FC530A /* CoreData */,
@@ -191,12 +205,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888011FC2253E1B200E34E11 /* GameViewController.swift in Sources */,
 				B4ECF187226E477400DE646B /* QuizViewController.swift in Sources */,
 				11C8B96F224C107D001EBC65 /* MindBendr.xcdatamodeld in Sources */,
 				11C8B969224C107D001EBC65 /* ViewController.swift in Sources */,
 				1118EFB52278DA5F00B4485A /* RecordTableViewController.swift in Sources */,
+				1173EB7F228B44EF000FC454 /* Question.swift in Sources */,
 				11C8B967224C107D001EBC65 /* AppDelegate.swift in Sources */,
+				1173EB81228B4657000FC454 /* Answer.swift in Sources */,
+				1173EB83228B7D46000FC454 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

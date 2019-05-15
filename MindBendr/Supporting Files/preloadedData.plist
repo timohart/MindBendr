@@ -26,8 +26,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -53,8 +51,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -80,8 +76,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -107,8 +101,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -134,8 +126,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -161,8 +151,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -188,8 +176,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -215,8 +201,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -242,8 +226,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -269,8 +251,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -296,8 +276,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -323,8 +301,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -350,8 +326,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -377,8 +351,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -404,8 +376,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -431,8 +401,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -458,8 +426,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -485,8 +451,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>qText</key>
@@ -512,8 +476,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>level</key>
-		<integer>1</integer>
 	</dict>
 </array>
 </plist>

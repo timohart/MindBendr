@@ -15,10 +15,11 @@ class QuizViewController: UIViewController {
   // MARK: - Class Vars
     var breathingWithTimo: AVAudioPlayer?
   
-    var currentQuestion = 1
-    var totalQuestions = 10
+    var currentQuestionNumber = 1
     var userCorrect = 0
   
+    var currentQuestion : Question?
+
   // timer variables
     var seconds = 0
     var timer = Timer()
@@ -30,12 +31,23 @@ class QuizViewController: UIViewController {
   
   // question variables
     var changeQuestion = false
+    var usedQuestions : [Int] = []
   
-  // MARK: - Class Lets
+    // MARK: - Class Lets
+    let totalQuestions = 9
   
   // MARK: - Outlets
     @IBOutlet weak var currentQuestionCounter: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
+  
+    @IBOutlet weak var quizViewLabel: UILabel!
+    @IBOutlet weak var answer1Btn: UIButton!
+    @IBOutlet weak var answer2Btn: UIButton!
+    @IBOutlet weak var answer3Btn: UIButton!
+    
+    // MARK: - Arrays
+    private var questionsArray: NSArray!
+    private var answersArray: NSArray!
   
   // MARK: - At Load
     override func viewDidLoad() {
@@ -45,10 +57,14 @@ class QuizViewController: UIViewController {
         if let timoBreathe = self.setUpAudioPlayerWithFile("breatheWithTimo","mp3"){
             self.breathingWithTimo = timoBreathe
         }
-            
-        questionLabel()
-        
-        setupGame()
+      
+        if let path : String = Bundle.main.path(forResource: "preloadedData", ofType: "plist")! {
+          questionsArray = NSArray(contentsOfFile: path)! as [AnyObject] as NSArray
+        }
+      
+      questionLabel()
+      
+      setupGame()
     }
 
   // MARK: - IBActions
@@ -67,52 +83,44 @@ class QuizViewController: UIViewController {
         }
 
     }
-    
-    // grab reference to plist chosen and create an array of dictionaries
   
-    // var quizQuestions
+  @IBAction func AnswerButtonClick(_ sender: UIButton) {
+   var isCorrect : Bool = false
     
-    // while current question <= totalQuesions
+    for answer in currentQuestion!.answers {
+      if answer.text == sender.titleLabel?.text {
+        if answer.isCorrect {
+          isCorrect = true
+        }
+      }
+    }
     
-        // selectQuestion()
+    currentQuestionNumber += 1
     
-        // take randomized list of quizQuestions grab variable qText to display in questionLabel
-    
-        // grab the answers array associated with that question - could randomize as well
-        // display ansswerOptions on buttons for user to select from
-    
-        // if answer is true
-            // increment totalCorrect
-            // increment currentQuestion
-            // - - change button color if we have time
-        // else answer is false
-            // increment current question
-            // - - change button color if we have time
-        // end ifelse
-    
-    
-    // func selectQuestion(pass in quizQuestions)
-        // randomlize list and create an array
-        // sending to the while loop
-        // delete from the array of dictionaries.
-    // end function
+    if isCorrect {
+      currentScore +=  1
+        
+    } else {
+        
+        currentScore += 0
+        
+    }
 
-    // quiz label (top of screen) is pulls text matching name of the button pressed
-    
-    // output to currentQuestionLabel the currentQuestion of totalQuestions
+    loadQuestion()
+  }
   
   // MARK: - Supporting Func
   
     func questionLabel () {
         
-    currentQuestionCounter.text = "\(currentQuestion) of \(totalQuestions)"
+    currentQuestionCounter.text = "\(currentQuestionNumber) of  10"
     
     }
     
     func setupGame() {
         // timer count down to change question
-        // change seconds to start at 30
-        seconds = 30
+        // change seconds to start at 60
+        seconds = 60
         
         // change timerLabel to match current time
         timerLabel.text = "\(timerText) \(seconds)"
@@ -123,11 +131,51 @@ class QuizViewController: UIViewController {
                                      selector: #selector(QuizViewController.subtractTime),
                                      userInfo: nil,
                                      repeats: true)
+      
+      loadQuestion()
     }
+  
+  
+  func loadQuestion() {
+    questionLabel()
+    if currentQuestionNumber <= totalQuestions {
+      currentQuestion = selectCurrentQuestion()
+      
+      quizViewLabel.text = currentQuestion!.text
     
-    func runGame() {
         
+      loadAnswers()
+    } else {
+       endGame()
     }
+  }
+  
+  func loadAnswers() {
+    var usedAnswers = [Int]()
+    
+    while (usedAnswers.count < (currentQuestion?.answers.count)!) {
+      let selectedNum = Int.random(in: 1...(currentQuestion?.answers.count)!)
+      if (!usedAnswers.contains(selectedNum)) {
+        usedAnswers.append(selectedNum)
+        print("num: \(selectedNum)")
+        switch selectedNum {
+        case 1:
+          answer1Btn.setTitle(currentQuestion?.answers[selectedNum-1].text, for: .normal)
+        case 2:
+          answer2Btn.setTitle(currentQuestion?.answers[selectedNum-1].text, for: .normal)
+        case 3:
+          answer3Btn.setTitle(currentQuestion?.answers[selectedNum-1].text, for: .normal)
+        default:
+          print("Error!!")
+        }
+      } // if
+    } // While
+  }
+  
+  func endGame() {
+//    viewDidAppear(true)
+    self.performSegue(withIdentifier: "ScoreSegue", sender: self)
+  }
     
     // subtractTime func, actually subtracts time from 30 seconds to 0
     @objc func subtractTime() {
@@ -144,10 +192,43 @@ class QuizViewController: UIViewController {
             changeQuestion = true
             
             timer.invalidate()
+            
+            endGame()
         }
     }
+  
+  func selectCurrentQuestion() -> Question {
+    var selectedQuestion : Question?
+    var qText : String?
+    var answers : [Answer]?
+    
+    while (selectedQuestion == nil) {
+      let selectedNum = Int.random(in: 0...questionsArray.count - 1)
+      if (!usedQuestions.contains(selectedNum)) {
+        usedQuestions.append(selectedNum)
+        
+        if let question = questionsArray[selectedNum] as? [String:AnyObject] {
+          qText = question["qText"] as? String
+          answers = getAnswers(aDic: question["answers"] as! [[String : AnyObject]])
+          
+          selectedQuestion = Question(text: qText!, answers: answers!)
+        }
+      } // if
+    } // While
+    return selectedQuestion!
+  } // func sCQ
+  
+  func getAnswers(aDic : [[String:AnyObject]]) -> [Answer] {
+    var answers = [Answer]()
+    
+    for answer in aDic {
+      answers.append(Answer(text: (answer["text"] as? String)!, isCorrect: (answer["isCorrect"] as? Bool)!))
+    }
+    
+    return answers
+  }
 
-    // breathing with Timo
+  // MARK: - breathing with Timo
     func setUpAudioPlayerWithFile(_ file: String, _ type: String) -> AVAudioPlayer? {
         // Use Bundle class to tell Xcode where in the project to look
         // for the passed-in file. It will give us the full (absolute)
@@ -176,17 +257,18 @@ class QuizViewController: UIViewController {
         return audioPlayer
     }
   
-  /*
    // MARK: - Navigation
    
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
+// In a storyboard-based application, you will often want to do a little preparation before navigation
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destination.
-   // Pass the selected object to the new view controller.
+    if segue.identifier == "ScoreSegue" {
+        // Get a reference to the destination view controller for this segue and set its author property to the currently selected author in the table view that was obtained in the nested if portion of the optional binding chain above...
+        let destinationViewController = segue.destination as! ScoreViewController
+
+        // set booksTableViewController's author property
+        destinationViewController.score = currentScore
+        destinationViewController.numberOfQuestions = totalQuestions
+    }
    }
-   */
   
-  //
-  // button is pressed for breathing soundtrack
-  //
 }

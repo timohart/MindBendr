@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+  <dict>
+		<key>qText</key>
+		<string>During the reign Queen Victoria of Ireland, Great Britian, Australia, New Zealand and Emperiess of India, what of the following inventions were not invented during her reign?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>Airplans</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Train</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>Anistetics</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+  <dict>
+		<key>qText</key>
+		<string>How many bytes are 8 bits?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>(8 x 0) + (2 to the power of 0)</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>squar root of 64</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>the number of people in a barbershoo quortet</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+  <dict>
+		<key>qText</key>
+		<string>The US Senate has how many house of repersentive members?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>0</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>2 from each state in the union</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>468</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+  <dict>
+		<key>qText</key>
+		<string>In writing modern music, which letter is not used to repersent a note?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>H</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>G</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>A</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+  <dict>
+		<key>qText</key>
+		<string>How many days were there in 2000?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>365</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>366</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>364</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+		<key>level</key>
+		<integer>1</integer>
+	</dict>
+  <dict>
+		<key>qText</key>
+		<string>What is not a version of Windows?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>2004</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>XP</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>2000</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+  <dict>
+		<key>qText</key>
+		<string>How many minutes does it take the earth to circle the sun?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>525969.16</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>525600</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>527040</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+  <dict>
+		<key>qText</key>
+		<string>What is not a UN Member?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>Vadican City</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>The USA</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>United Kingdon</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+  <dict>
+		<key>qText</key>
+		<string>What is not a UN Member?</string>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>text</key>
+				<string>Vadican City</string>
+				<key>isCorrect</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>The USA</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>text</key>
+				<string>United Kingdon</string>
+				<key>isCorrect</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>
