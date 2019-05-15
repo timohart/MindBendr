@@ -12,7 +12,8 @@ import CoreData
 class ScoreViewController: UIViewController {
   
   var score = 0
-  var numberOfQuestions = 0
+  var numberOfQuestions = 10
+  var finalScore = 0
 
   @IBOutlet weak var scoreLabel: UILabel!
   

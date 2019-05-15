@@ -34,7 +34,7 @@ class QuizViewController: UIViewController {
     var usedQuestions : [Int] = []
   
     // MARK: - Class Lets
-    let totalQuestions = 10
+    let totalQuestions = 9
   
   // MARK: - Outlets
     @IBOutlet weak var currentQuestionCounter: UILabel!
@@ -98,7 +98,12 @@ class QuizViewController: UIViewController {
     currentQuestionNumber += 1
     
     if isCorrect {
-      currentScore = currentScore + 1
+      currentScore +=  1
+        
+    } else {
+        
+        currentScore += 0
+        
     }
 
     loadQuestion()
@@ -108,14 +113,14 @@ class QuizViewController: UIViewController {
   
     func questionLabel () {
         
-    currentQuestionCounter.text = "\(currentQuestionNumber) of \(totalQuestions)"
+    currentQuestionCounter.text = "\(currentQuestionNumber) of  10"
     
     }
     
     func setupGame() {
         // timer count down to change question
-        // change seconds to start at 30
-        seconds = 30
+        // change seconds to start at 60
+        seconds = 60
         
         // change timerLabel to match current time
         timerLabel.text = "\(timerText) \(seconds)"
