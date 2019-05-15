@@ -83,23 +83,52 @@ class QuizViewController: UIViewController {
         }
 
     }
+    
+    func answerQuestion () {
+        var isCorrect : Bool = false
+        
+        for answer in currentQuestion!.answers {
+            if answer.text == answer.text {
+                if answer.isCorrect {
+                    isCorrect = true
+                    currentQuestionNumber += 1
+                    //endGame()
+                }
+            } else {
+                currentQuestionNumber += 1
+                //endGame()
+            }
+        }
+        
+        if isCorrect {
+            currentScore = currentScore + 1
+        }
+        
+        loadQuestion()
+    }
   
   @IBAction func AnswerButtonClick(_ sender: UIButton) {
-    var isCorrect : Bool = false
+    answerQuestion()
+   /* var isCorrect : Bool = false
     
     for answer in currentQuestion!.answers {
       if answer.text == sender.titleLabel?.text {
         if answer.isCorrect {
           isCorrect = true
+            currentQuestionNumber += 1
+            //endGame()
         }
-      }
+      } else {
+        currentQuestionNumber += 1
+        //endGame()
+        }
     }
     
     if isCorrect {
       currentScore = currentScore + 1
     }
 
-    loadQuestion()
+    loadQuestion() */
   }
   
   // MARK: - Supporting Func
@@ -134,10 +163,11 @@ class QuizViewController: UIViewController {
       currentQuestion = selectCurrentQuestion()
       
       quizViewLabel.text = currentQuestion!.text
-      
+    
+        
       loadAnswers()
     } else {
-      endGame()
+       endGame()
     }
   }
   
@@ -167,11 +197,7 @@ class QuizViewController: UIViewController {
 //    viewDidAppear(true)
     self.performSegue(withIdentifier: "ScoreSegue", sender: self)
   }
-  
-  override func viewDidAppear(_ animated: Bool)  {
-    super.viewDidAppear(animated)
-    performSegue(withIdentifier: "ScoreSegue", sender: nil)
-  }
+
     
     // subtractTime func, actually subtracts time from 30 seconds to 0
     @objc func subtractTime() {
@@ -188,6 +214,8 @@ class QuizViewController: UIViewController {
             changeQuestion = true
             
             timer.invalidate()
+            
+            endGame()
         }
     }
   
