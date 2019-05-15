@@ -203,7 +203,7 @@ class QuizViewController: UIViewController {
     var answers : [Answer]?
     
     while (selectedQuestion == nil) {
-      let selectedNum = Int.random(in: 0...questionsArray.count)
+      let selectedNum = Int.random(in: 0...questionsArray.count - 1)
       if (!usedQuestions.contains(selectedNum)) {
         usedQuestions.append(selectedNum)
         
@@ -261,7 +261,7 @@ class QuizViewController: UIViewController {
    
 // In a storyboard-based application, you will often want to do a little preparation before navigation
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "ScoreViewController" {
+    if segue.identifier == "ScoreSegue" {
         // Get a reference to the destination view controller for this segue and set its author property to the currently selected author in the table view that was obtained in the nested if portion of the optional binding chain above...
         let destinationViewController = segue.destination as! ScoreViewController
 
