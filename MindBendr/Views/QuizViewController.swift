@@ -84,12 +84,20 @@ class QuizViewController: UIViewController {
 
     }
   
-  @IBAction func AnswerButtonClick(_ sender: Any) {
-    // Check if answer is correct
+  @IBAction func AnswerButtonClick(_ sender: UIButton) {
+    var isCorrect : Bool = false
+    
+    for answer in currentQuestion!.answers {
+      if answer.text == sender.titleLabel?.text {
+        if answer.isCorrect {
+          isCorrect = true
+        }
+      }
+    }
+    
+    if isCorrect {
       currentScore = currentScore + 1
-      // other correct question stuff
-    // else
-      // something wrong answer
+    }
 
     loadQuestion()
   }
@@ -122,17 +130,37 @@ class QuizViewController: UIViewController {
   
   
   func loadQuestion() {
-    if currentQuestionNumber <= 10 {
+    if currentQuestionNumber <= totalQuestions {
       currentQuestion = selectCurrentQuestion()
       
       quizViewLabel.text = currentQuestion!.text
       
-      for answer in currentQuestion!.answers {
-        // Button Load
-      }
+      loadAnswers()
     } else {
       endGame()
     }
+  }
+  
+  func loadAnswers() {
+    var usedAnswers = [Int]()
+    
+    while (usedAnswers.count < (currentQuestion?.answers.count)!) {
+      let selectedNum = Int.random(in: 0...(currentQuestion?.answers.count)!)
+      if (usedAnswers.contains(selectedNum)) {
+        usedAnswers.append(selectedNum)
+        
+        switch selectedNum {
+        case 0:
+          answer1Btn.setTitle(currentQuestion?.answers[selectedNum].text, for: .normal)
+        case 1:
+          answer2Btn.setTitle(currentQuestion?.answers[selectedNum].text, for: .normal)
+        case 2:
+          answer3Btn.setTitle(currentQuestion?.answers[selectedNum].text, for: .normal)
+        default:
+          print("Error!!")
+        }
+      } // if
+    } // While
   }
   
   func endGame() {
