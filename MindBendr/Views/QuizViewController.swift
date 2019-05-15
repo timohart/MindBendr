@@ -83,29 +83,6 @@ class QuizViewController: UIViewController {
         }
 
     }
-    
-    func answerQuestion () {
-        var isCorrect : Bool = false
-        
-        for answer in currentQuestion!.answers {
-            if answer.text == answer.text {
-                if answer.isCorrect {
-                    isCorrect = true
-                    currentQuestionNumber += 1
-                    //endGame()
-                }
-            } else {
-                currentQuestionNumber += 1
-                //endGame()
-            }
-        }
-        
-        if isCorrect {
-            currentScore = currentScore + 1
-        }
-        
-        loadQuestion()
-    }
   
   @IBAction func AnswerButtonClick(_ sender: UIButton) {
    var isCorrect : Bool = false
@@ -114,14 +91,11 @@ class QuizViewController: UIViewController {
       if answer.text == sender.titleLabel?.text {
         if answer.isCorrect {
           isCorrect = true
-            currentQuestionNumber += 1
-            //endGame()
         }
-      } else {
-        currentQuestionNumber += 1
-        //endGame()
-        }
+      }
     }
+    
+    currentQuestionNumber += 1
     
     if isCorrect {
       currentScore = currentScore + 1
@@ -158,6 +132,7 @@ class QuizViewController: UIViewController {
   
   
   func loadQuestion() {
+    questionLabel()
     if currentQuestionNumber <= totalQuestions {
       currentQuestion = selectCurrentQuestion()
       
@@ -196,7 +171,6 @@ class QuizViewController: UIViewController {
 //    viewDidAppear(true)
     self.performSegue(withIdentifier: "ScoreSegue", sender: self)
   }
-
     
     // subtractTime func, actually subtracts time from 30 seconds to 0
     @objc func subtractTime() {
