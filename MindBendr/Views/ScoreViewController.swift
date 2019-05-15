@@ -13,14 +13,13 @@ class ScoreViewController: UIViewController {
   
   var score = 0
   var numberOfQuestions = 10
-  var finalScore = 0
 
   @IBOutlet weak var scoreLabel: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    scoreLabel.text = "\(score) / \(numberOfQuestions)"
+    scoreLabel.text = "\(score) / 10"
     
     saveScore()
   }
