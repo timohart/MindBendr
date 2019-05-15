@@ -81,6 +81,15 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1173EB84228B881E000FC454 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				1173EB7E228B44EF000FC454 /* Question.swift */,
+				1173EB80228B4657000FC454 /* Answer.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		11C8B95A224C107D001EBC65 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +109,7 @@
 		11C8B965224C107D001EBC65 /* MindBendr */ = {
 			isa = PBXGroup;
 			children = (
+				1173EB84228B881E000FC454 /* Objects */,
 				B4ECF1992270B9F700DE646B /* Sounds */,
 				1128DBEA225E84B400FC530A /* Supporting Files */,
 				1128DBE9225E69E700FC530A /* CoreData */,
@@ -109,8 +119,6 @@
 				11C8B96A224C107D001EBC65 /* Main.storyboard */,
 				11C8B972224C1080001EBC65 /* LaunchScreen.storyboard */,
 				11C8B975224C1080001EBC65 /* Info.plist */,
-				1173EB7E228B44EF000FC454 /* Question.swift */,
-				1173EB80228B4657000FC454 /* Answer.swift */,
 			);
 			path = MindBendr;
 			sourceTree = "<group>";

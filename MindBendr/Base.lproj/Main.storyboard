@@ -111,6 +111,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Oai-Pz-eJm"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="AnswerButtonClick:" destination="3ne-DX-711" eventType="touchUpInside" id="n5Y-Vs-t1g"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yWM-Vg-heg">
                                 <rect key="frame" x="56" y="502" width="257" height="40"/>
@@ -118,6 +121,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5Rt-1q-qXQ"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="AnswerButtonClick:" destination="3ne-DX-711" eventType="touchUpInside" id="vY4-9i-6dS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30y-du-9ta" userLabel="currentQuestionCounter">
                                 <rect key="frame" x="239.5" y="588" width="73.5" height="30"/>
@@ -157,6 +163,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="AvE-US-5fF"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="AnswerButtonClick:" destination="3ne-DX-711" eventType="touchUpInside" id="De2-eX-bu0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydf-Hf-l3H">
                                 <rect key="frame" x="155" y="40" width="58" height="21"/>
