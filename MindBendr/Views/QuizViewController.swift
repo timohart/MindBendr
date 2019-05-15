@@ -57,14 +57,14 @@ class QuizViewController: UIViewController {
         if let timoBreathe = self.setUpAudioPlayerWithFile("breatheWithTimo","mp3"){
             self.breathingWithTimo = timoBreathe
         }
-            
-        questionLabel()
-        
-        setupGame()
       
         if let path : String = Bundle.main.path(forResource: "preloadedData", ofType: "plist")! {
           questionsArray = NSArray(contentsOfFile: path)! as [AnyObject] as NSArray
         }
+      
+      questionLabel()
+      
+      setupGame()
     }
 
   // MARK: - IBActions
@@ -146,7 +146,7 @@ class QuizViewController: UIViewController {
     
     while (usedAnswers.count < (currentQuestion?.answers.count)!) {
       let selectedNum = Int.random(in: 0...(currentQuestion?.answers.count)!)
-      if (usedAnswers.contains(selectedNum)) {
+      if (!usedAnswers.contains(selectedNum)) {
         usedAnswers.append(selectedNum)
         
         switch selectedNum {
@@ -213,7 +213,7 @@ class QuizViewController: UIViewController {
   } // func sCQ
   
   func getAnswers(aDic : [[String:AnyObject]]) -> [Answer] {
-    var answers: [Answer]!
+    var answers = [Answer]()
     
     for answer in aDic {
       answers.append(Answer(text: (answer["text"] as? String)!, isCorrect: (answer["isCorrect"] as? Bool)!))
